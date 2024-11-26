@@ -27,8 +27,8 @@ author:
   bio              : "Economist by day, musician by night"
   location         : "Albany, New York"
   employer         : "SUNY, Albany"
-  employer         : "UW Madison"
-  employer         : "VNIT, Nagpur"
+  institution        : "UW Madison"
+  college         : "VNIT, Nagpur"
   uri              : # URL
   email            : "econpiyush@icloud.com" 
 
