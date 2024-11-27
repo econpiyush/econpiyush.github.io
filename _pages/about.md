@@ -20,7 +20,7 @@ More details are in my CV.
 
 CV
 ======
-PLease find my CV here: [CV](https://www.dropbox.com/preview/Piyush_A_CV.pdf?context=content_suggestions&role=personal)
+Please find my CV here: [CV](https://www.dropbox.com/preview/Piyush_A_CV.pdf?context=content_suggestions&role=personal)
 
 
 Working Papers
