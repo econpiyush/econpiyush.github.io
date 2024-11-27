@@ -7,10 +7,3 @@ location: "Albany, NY"
 permalink: /teaching/2014-spring-teaching-1
 collection: teaching
 ---
-
-
-Heading 2
-======
-
-Heading 3
-======
