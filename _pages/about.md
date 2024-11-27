@@ -16,7 +16,7 @@ My research interests are Finance, Macro Labor and Regulatory Economics. Specifi
 
 CV
 ======
-PLease find my CV here: [CV]((https://www.dropbox.com/preview/Piyush_A_CV.pdf?context=content_suggestions&role=personal)) 
+PLease find my CV here: [CV](https://www.dropbox.com/preview/Piyush_A_CV.pdf?context=content_suggestions&role=personal)
 
 
 Working Papers
