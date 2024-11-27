@@ -6,7 +6,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
-
+---
 Welcome!
 ======
 I am a fourth year PhD candidate at the State University of New York, Albany. 
@@ -17,7 +17,7 @@ CV
 PLease find my CV here: [CV]([https://github.com/academicpages/academicpages.github.io](https://www.dropbox.com/preview/Piyush_A_CV.pdf?context=content_suggestions&role=personal)) 
 
 
-Working Paper
+Working Papers
 ======
 
 
