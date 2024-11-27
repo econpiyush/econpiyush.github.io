@@ -1,10 +1,10 @@
 ---
-title: "2024 Asia Meeting of the Econometric Society, East & Southeast Asia (AMES-E/SE)"
+title: "Money and Banking (AECO350)-Spring 2024"
 date: 2024-08-02
-location: "Ho Chi Minh City, Vietnam"
-venue: "Le Meridien Saigon"
+location: "SUNY, Albany"
+venue: ""
 collection: talks
-type: "Presentation: Regulation, Technology and Provider Redistribution"
+type: "Business Economics and Business Administration Students"
 permalink: /talks/2012-03-01-talk-1
 ---
 
