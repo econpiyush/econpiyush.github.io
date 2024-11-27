@@ -1,7 +1,3 @@
-Instructor of Record
-======
-
-
 ---
 title: "Money and Banking, AECO(350)"
 type: "Business Economics and Business Administration Majors"
