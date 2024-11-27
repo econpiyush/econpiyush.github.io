@@ -16,6 +16,7 @@ My research interests are Finance, Macro Labor and Regulatory Economics. Specifi
 
 I love teaching and brining economics research into the classroom. I have 7 years of total teaching experience.
 Post Masters' Degree:
+
 ~ 2 semesters of experience as an Instructor of Record at SUNY, Albany.
 ~ 7 semesters of experience as a Graduate Teaching Assistant, 5 of them at SUNY, Albany and 2 of them at U Hawaii, Manoa.
 ~ 2 Semesters of experience as a Graduate Economics Tutor.
