@@ -1,5 +1,3 @@
-Instructor of Record
-======
 ---
 title: "Money and Banking (AECO350)-Spring 2024"
 date: ""
