@@ -5,6 +5,6 @@ type: "Business Economics and Business Administration Students"
 location: "SUNY, Albany"
 venue: ""
 collection: teaching
-permalink: /teaching/2012-03-01-talk-1
+permalink: /teaching/2012-03-01-teaching-1
 ---
 
