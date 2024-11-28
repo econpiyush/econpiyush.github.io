@@ -1,10 +1,21 @@
 ---
 title: "Money and Banking (AECO350)-Spring 2024"
-date: ""
 type: "Business Economics and Business Administration Students"
+permalink: /teaching/2014-spring-teaching-1
+venue: "University 1, Department"
+date: ""
 location: "SUNY, Albany"
-venue: ""
 collection: teaching
-permalink: /teaching/2012-03-01-teaching-1
 ---
+
+This is a description of a teaching experience. You can use markdown like any other post.
+
+Heading 1
+======
+
+Heading 2
+======
+
+Heading 3
+======
 
