@@ -3,6 +3,7 @@ title: "[Labor Economics-AECO370-Summer2024](https://explore.suny.edu/courses/24
 type: "Business Economics and Business Administration Majors"
 venue: "SUNY, Albany"
 location: "Albany, NY"
+date: 2024-06-01
 collection: teaching
 permalink: /teaching/2014-spring-teaching-1
 ---
