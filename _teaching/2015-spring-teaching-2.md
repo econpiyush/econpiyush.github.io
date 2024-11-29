@@ -1,20 +1,9 @@
 ---
-title: "Teaching experience 2"
+title: "[Labor Economics-AECO370-Summer2024](https://explore.suny.edu/courses/240984)"
+type: "Business Economics and Business Administration Majors"
+venue: "SUNY, Albany"
+location: "Albany, NY"
 collection: teaching
-type: "Workshop"
-permalink: /teaching/2015-spring-teaching-1
-venue: "University 1, Department"
-date: 2015-01-01
-location: "City, Country"
+permalink: /teaching/2014-spring-teaching-1
 ---
 
-This is a description of a teaching experience. You can use markdown like any other post.
-
-Heading 1
-======
-
-Heading 2
-======
-
-Heading 3
-======
