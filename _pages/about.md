@@ -38,3 +38,6 @@ Man vs Machine: French-Fama vs LLM- with [Ulrich Hounyo](https://sites.google.co
 [Breaking Piggy Banks: Decoding Savings During Crises](https://www.dropbox.com/scl/fi/xuyfx5ous0q007dt8qhzl/BPBDSSC_Piyush.A.2024.pdf?rlkey=bcqnda8gj9vpk78q4aar6jsho&st=vtk68tb3&dl=0)
 
 [Institutional Discrimination: How Institutional and Social Norms Shape Discriminatory Behavior](https://www.researchgate.net/publication/358076784_Title_How_institutional_and_social_norms_shape_discriminatory_behavior_A_game_theoretic_approach_-_Piyush_A?_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6ImhvbWUiLCJwYWdlIjoicHJvZmlsZSIsInByZXZpb3VzUGFnZSI6ImhvbWUiLCJwb3NpdGlvbiI6InBhZ2VDb250ZW50In19)
+
+Equilibrium Wage-Health Insurance Contracts
+
