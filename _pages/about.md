@@ -25,7 +25,7 @@ Please find my CV here: [CV](https://www.dropbox.com/preview/Piyush_A_CV.pdf?con
 
 Working Papers
 ======
-[Regulation, Technology and Provider Redistribution](https://www.dropbox.com/scl/fi/b5sv81nfh7xkm8o4nayms/PRTPS.A.Piyush.2004.Manuscript.pdf?rlkey=4jq3xt2dhgls2blb2micqg40f&st=62hy8ftm&dl=0)
+[Regulation, Technology and Provider Redistribution](https://www.dropbox.com/scl/fi/b5sv81nfh7xkm8o4nayms/PRTPS.A.Piyush.2004.Manuscript.pdf?rlkey=4jq3xt2dhgls2blb2micqg40f&st=62hy8ftm&dl=0](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4817420)
 
 
 
