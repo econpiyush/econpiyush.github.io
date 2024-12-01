@@ -33,4 +33,4 @@ Working Papers
 Work in Progress
 ======
 
-[Man vs Machine: French-Fama vs LLM]
+Man vs Machine: French-Fama vs LLM- with [Ulrich Hounyo](https://sites.google.com/site/ulrichounyo/) 
