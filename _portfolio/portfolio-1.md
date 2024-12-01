@@ -1,6 +1,6 @@
 ---
 title: "Song Covers"
-excerpt: " 1<br/><img src='/images/500x300.png'>"
+excerpt: " <br/><img src='/images/500x300.png'>"
 collection: portfolio
 ---
 
