@@ -34,3 +34,5 @@ Work in Progress
 ======
 
 Man vs Machine: French-Fama vs LLM- with [Ulrich Hounyo](https://sites.google.com/site/ulrichounyo/) 
+
+[Breaking Piggy Banks: Decoding Savings During Crises](https://www.dropbox.com/scl/fi/xuyfx5ous0q007dt8qhzl/BPBDSSC_Piyush.A.2024.pdf?rlkey=bcqnda8gj9vpk78q4aar6jsho&st=vtk68tb3&dl=0)
