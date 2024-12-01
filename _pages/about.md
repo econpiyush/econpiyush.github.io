@@ -29,3 +29,8 @@ Working Papers
 
 
 [Medicaid Expansion: Key that Opens the Job Lock?](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4987264)
+
+Work in Progress
+======
+
+[Man vs Machine: French-Fama vs LLM]
