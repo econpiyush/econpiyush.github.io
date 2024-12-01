@@ -4,4 +4,4 @@ excerpt: " <br/><img src='/images/openmic1.png'>"
 collection: portfolio
 ---
 
-[Bowling with Grad Student Association]()
+[Bowling](Bowling.MP4)
