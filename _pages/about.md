@@ -28,4 +28,4 @@ Working Papers
 [Regulation, Technology and Provider Redistribution](https://www.dropbox.com/scl/fi/b5sv81nfh7xkm8o4nayms/PRTPS.A.Piyush.2004.Manuscript.pdf?rlkey=4jq3xt2dhgls2blb2micqg40f&st=62hy8ftm&dl=0)
 
 
-
+[Medicaid Expansion: Key that Opens the Job Lock?](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4987264)
