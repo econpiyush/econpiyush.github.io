@@ -4,6 +4,6 @@ excerpt: " <br/><img src='/images/openmic1.png'>"
 collection: portfolio
 ---
 
-[Trains-Porcupine Tree (Cover)](https://www.dropbox.com/scl/fi/rl8beib7q4ruw2rq2xma7/Trains-PorcupineTree-Cover.mov?rlkey=0a5kfiw7a08gn5x4bja3q7cvm&st=ohy8u2iu&dl=0)
+[Trains-Porcupine Tree (Cover)](https://www.dropbox.com/scl/fi/hbrj718a0wfk97g7xfjsr/Trains-PorcupineTree-Cover.MOV?rlkey=q1155g2skkh5hzou56trbxqgo&st=uxcpz9ji&dl=0)
 
-[Stinkfist-Tool (Cover)](https://www.dropbox.com/scl/fi/f5r79qsbswneg167lqp52/Stinkfist-Tool-Cover.MP4?rlkey=alw2a1s718jylpbmi5v69jqrj&st=fipk94z1&dl=0)
+[Stinkfist-Tool (Cover)](https://www.dropbox.com/scl/fi/r816ams342fyws477emdt/Stinkfist-Tool-Cover.MOV?rlkey=qp97x49wobnvyln37yt5utaqx&st=gqhyp445&dl=0)
