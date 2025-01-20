@@ -4,7 +4,7 @@ date: 2025-05-08
 location: "Chicago, IL"
 venue: "U Chicago, Economics"
 collection: talks
-type: "Talk"
+type: "Talk scheduled"
 permalink: /talks/2012-03-01-talk-1
 ---
 
