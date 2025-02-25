@@ -1,5 +1,5 @@
 ---
-title: "University of Chicago, Kenneth C. Griffin Department of Economics - Pregame (John List)"
+title: "University of Chicago, Economics - Pregame (John List)"
 date: 2025-05-08
 location: "Chicago, IL"
 venue: "U Chicago, Economics"
