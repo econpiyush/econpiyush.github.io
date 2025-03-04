@@ -15,7 +15,7 @@ Fourth year PhD candidate at the State University of New York, Albany.
 Primary research interests are Finance, Macro-Labor and Regulatory Economics. 
 Other interests are Behavioral Economics and Decision Theory. 
 
-I love teaching and bringing economics research into the classroom. I have 4 years of teaching experience prior to my master's degree and 11 semesters of teaching experience post my master's degree. 
+Loves teaching and bringing economics research into the classroom: 4 years of teaching experience prior to master's degree and 11 semesters of teaching experience post master's degree. 
 More details in CV. 
 
 CV
