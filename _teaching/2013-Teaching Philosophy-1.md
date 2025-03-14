@@ -1,7 +1,8 @@
 ---
 title: "[Teaching Philosophy](https://www.dropbox.com/preview/Teaching_Philosophy.pdf?context=content_suggestions&role=personal)"
+type: "Economics"
 location: "Albany, NY"
+date: 2025-01-01
 collection: teaching
-date: ""
-permalink: /teaching/2014-spring-teaching-1
+permalink: /teaching/2014-spring-teaching-2
 ---
