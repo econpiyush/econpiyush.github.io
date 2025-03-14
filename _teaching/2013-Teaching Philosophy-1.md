@@ -1,7 +1,7 @@
 
 ---
 title: "Teaching Philosophy"
-type: "Business Economics and Business Administration Majors"
+type: ""
 venue: "SUNY, Albany"
 location: "Albany, NY"
 date: 2024-01-01
