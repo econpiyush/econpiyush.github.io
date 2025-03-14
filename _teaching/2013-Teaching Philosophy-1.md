@@ -1,3 +1,13 @@
+---
+title: "[Teaching Philosophy](https://www.albany.edu/undergraduate-bulletin/economics-courses.php](https://www.dropbox.com/scl/fi/z7hic0s6u9zdi47uuk3ey/Announcements-AECO350-Money-and-Banking-1413-UAlbany.pdf?rlkey=asbe7ehx25xgybo8raud8q7ge&st=w5td6n8f&dl=0)"
+type: "Business Economics and Business Administration Majors"
+venue: "SUNY, Albany"
+location: "Albany, NY"
+date: 2024-01-01
+collection: teaching
+permalink: /teaching/2014-spring-teaching-1
+---
+
 
 
 
