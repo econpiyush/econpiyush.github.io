@@ -1,13 +1,13 @@
-
 ---
-title: "[Teaching Philosophy]()"
-type: "Business Economics and Business Administration Majors"
+title: "[Teaching Philosophy](https://www.albany.edu/undergraduate-bulletin/economics-courses.php)"
+type: ""
 venue: "SUNY, Albany"
 location: "Albany, NY"
-date: 2024-01-01
+date: 2025-01-01
 collection: teaching
 permalink: /teaching/2014-spring-teaching-1
 ---
+
 
 
 
