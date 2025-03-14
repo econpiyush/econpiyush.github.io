@@ -1,6 +1,6 @@
 
 ---
-title: "[Teaching {hilosophy]()"
+title: "[Teaching Philosophy]()"
 type: "Business Economics and Business Administration Majors"
 venue: "SUNY, Albany"
 location: "Albany, NY"
