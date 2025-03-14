@@ -7,4 +7,3 @@ date: 2024-01-01
 collection: teaching
 permalink: /teaching/2014-spring-teaching-2
 ---
-
