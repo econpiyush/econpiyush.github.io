@@ -14,4 +14,4 @@ permalink: /teaching/2014-spring-teaching-1
 
 
 
-<p>Classes taught as "Instructor of Record" below (Please refer to CV for teaching experience pre-masters and post-masters as GTA). 
+<p> Please refer to CV for teaching experience pre-masters and post-masters as GTA. Classes taught as "Instructor of Record" are given below: 
