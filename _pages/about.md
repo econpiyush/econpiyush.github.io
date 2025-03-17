@@ -18,7 +18,7 @@ Other interests are Behavioral Economics and Decision Theory.
 Loves teaching and bringing economics research into the classroom: 4 years of teaching experience prior to master's degree and 11 semesters of teaching experience post master's degree. 
 More details in CV. 
 
-[CV](https://www.dropbox.com/scl/fi/evh8n8q6h0ex2vq7j58rz/Piyush_A_CV.pdf?rlkey=lh22ve7nonss7dpls6sv4nst9&st=ctxd9hft&dl=0)
+up-to-date CV [CV](https://www.dropbox.com/scl/fi/evh8n8q6h0ex2vq7j58rz/Piyush_A_CV.pdf?rlkey=lh22ve7nonss7dpls6sv4nst9&st=ctxd9hft&dl=0)
 ====== 
 
 Working Papers
