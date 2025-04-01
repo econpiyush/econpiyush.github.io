@@ -19,7 +19,7 @@ Experienced in integrating economics research into the classroom, with four year
 
 Working Papers
 ======
-[Regulation, Technology and Provider Redistribution](https://www.dropbox.com/scl/fi/b5sv81nfh7xkm8o4nayms/PRTPS.A.Piyush.2004.Manuscript.pdf?rlkey=4jq3xt2dhgls2blb2micqg40f&st=62hy8ftm&dl=0) [SSRN Link](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4817420) [Selected for 13th World Congress of the Econometric Society (ESWC 2025) - August 18 to 22, 2025 COEX in Seoul, South Korea.](https://www.eswc2025.org/about/01.html?sMenu=01)
+[Regulation, Technology and Provider Redistribution](https://www.dropbox.com/scl/fi/b5sv81nfh7xkm8o4nayms/PRTPS.A.Piyush.2004.Manuscript.pdf?rlkey=4jq3xt2dhgls2blb2micqg40f&st=62hy8ftm&dl=0) [SSRN Link](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4817420) - Selected for [13th World Congress of the Econometric Society (ESWC 2025) - August 18 to 22, 2025 COEX in Seoul, South Korea.](https://www.eswc2025.org/about/01.html?sMenu=01)
 
 
 [Medicaid Expansion: Key that Opens the Job Lock?](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4987264)
