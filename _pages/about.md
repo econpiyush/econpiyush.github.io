@@ -2,6 +2,7 @@
 permalink: /
 title: "Welcome!"
 author_profile: true
+header_quote: "*\"Your favorite quote here.\" – Author*"
 redirect_from: 
   - /about/
   - /about.html
