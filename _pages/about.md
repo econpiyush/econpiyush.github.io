@@ -2,7 +2,7 @@
 permalink: /
 title: "Welcome!"
 author_profile: true
-header_quote: "*\"Your favorite quote here.\" – Author*"
+header_quote: "*\"Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment.\" – Buddha*"
 redirect_from: 
   - /about/
   - /about.html
