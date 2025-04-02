@@ -10,6 +10,16 @@
  *
 */
 
+/* Reduce font size on the About page (homepage) */
+body.home .page__inner-wrap {
+  font-size: 0.9em; /* Adjust this value as needed */
+}
+
+/* Ensure the quote's font size scales appropriately */
+body.home .header-quote {
+  font-size: 0.9em; /* Match the quote's size to the new default, or adjust as desired */
+}
+
 @import "vendor/breakpoint/breakpoint"; // media query mixins
 @import "variables";
 @import "mixins";
