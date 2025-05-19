@@ -8,5 +8,5 @@ type: "Talk scheduled"
 permalink: /talks/2012-03-01-talk-1
 ---
 
-
+Postponed to late Summer 
 
