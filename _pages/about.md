@@ -22,13 +22,12 @@ Working Papers
 ======
 [Regulation, Technology and Provider Redistribution](https://www.dropbox.com/scl/fi/b5sv81nfh7xkm8o4nayms/PRTPS.A.Piyush.2004.Manuscript.pdf?rlkey=4jq3xt2dhgls2blb2micqg40f&st=62hy8ftm&dl=0) [SSRN Link](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4817420) - Selected for [13th World Congress of the Econometric Society (ESWC 2025) - August 18 to 22, 2025 COEX in Seoul, South Korea.](https://www.eswc2025.org/about/01.html?sMenu=01)
 
+Effect of Social Media Sentiments on Domestic and Foreign Stock Returns: A Machine Learning Approach - with [Ulrich Hounyo](https://sites.google.com/site/ulrichounyo/) 
 
 [Medicaid Expansion: Key that Opens the Job Lock?](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4987264)
 
-Work in Progress
+Resting
 ======
-
-From Theory to AI: Stock Prediction Face-Off between Factor Models and Large Language Models - with [Ulrich Hounyo](https://sites.google.com/site/ulrichounyo/) 
 
 [Breaking Piggy Banks: Decoding Savings During Crises](https://www.dropbox.com/scl/fi/xuyfx5ous0q007dt8qhzl/BPBDSSC_Piyush.A.2024.pdf?rlkey=bcqnda8gj9vpk78q4aar6jsho&st=vtk68tb3&dl=0)
 
