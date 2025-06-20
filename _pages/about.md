@@ -12,9 +12,9 @@ redirect_from:
 
 
 
-Fourth-year PhD candidate at the State University of New York, Albany. Primary research interests: Finance, Macro-Labor, and Regulatory Economics. Other interests: Behavioral Economics and Decision Theory.
+Fourth-year PhD candidate at the State University of New York, Albany. Primary research interests: Finance, Regulatory Economics and Macro-Labor. Other interests: Behavioral Economics and Decision Theory.
 
-Experienced in integrating economics research into the classroom, with four years of teaching experience prior to earning a master's degree, 11 semesters as a Graduate Teaching Assistant (GTA) post-master's, and two semesters as an instructor of record. More details available in the up-to-date [CV](https://www.dropbox.com/scl/fi/evh8n8q6h0ex2vq7j58rz/Piyush_A_CV.pdf?rlkey=lh22ve7nonss7dpls6sv4nst9&st=ctxd9hft&dl=0). 
+Up-to-date CV available upon [request](pgade@albany.edu). 
 
 ====== 
 
