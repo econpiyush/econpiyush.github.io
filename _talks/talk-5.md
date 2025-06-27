@@ -4,7 +4,7 @@ date: 2025-08-18
 location: "Seoul, South Korea"
 venue: "COEX"
 collection: talks
-type: "Presentation: Regulation, Technology and Provider Redistribution"
+type: "Paper Presentation"
 permalink: /talks/2012-03-01-talk-5
 ---
 
