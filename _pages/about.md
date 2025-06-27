@@ -14,7 +14,7 @@ redirect_from:
 
 Fourth-year PhD candidate at the State University of New York, Albany. Primary research interests: Finance, Regulatory Economics and Macro-Labor. Other interests: Behavioral Economics and Decision Theory.
 
-[CV](https://www.dropbox.com/scl/fi/so6mz98udxnkpm37bl8pt/Piyush.A.CV.pdf?rlkey=h37jrnflzzizdu6anw1grnj2b&st=fb5d9pwj&dl=0). 
+[CV](https://www.dropbox.com/scl/fi/so6mz98udxnkpm37bl8pt/Piyush.A.CV.pdf?rlkey=h37jrnflzzizdu6anw1grnj2b&st=56h9ca5y&dl=0)
 
 ====== 
 
