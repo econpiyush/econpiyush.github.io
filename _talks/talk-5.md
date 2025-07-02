@@ -4,7 +4,7 @@ date: 2025-08-18
 location: "Seoul, South Korea"
 venue: "COEX"
 collection: talks
-type: "Paper Presentation (Couldn't attend due to lack of fund"
+type: "Paper Presentation (Couldn't attend due to lack of funds"
 permalink: /talks/2012-03-01-talk-5
 ---
 
