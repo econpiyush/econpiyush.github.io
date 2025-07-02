@@ -1,5 +1,5 @@
 ---
-title: "[Intermediate Macroeconomics-AECO301-Summer2025](https://explore.suny.edu/courses/240984](https://explore.suny.edu/courses/1348634)"
+title: "[Intermediate Macroeconomics-AECO301-Summer2025]()"
 type: "Instructor of Record"
 venue: "SUNY, Albany"
 location: "Albany, NY"
