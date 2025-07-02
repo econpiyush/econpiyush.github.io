@@ -5,7 +5,10 @@
 # prevent it from being included in the site.
 
 main:
-  - title: "Conferences & Presentations"
+  - title: "Research"
+    url: /
+    
+  - title: "Talks & Conferences"
     url: /talks/
 
   - title: "Teaching"
