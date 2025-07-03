@@ -1,5 +1,5 @@
 ---
-title: "Grad School Activities"
+title: "Grad School Escapades"
 excerpt: " <br/><img src='/images/openmic2.png'>"
 collection: portfolio
 ---
