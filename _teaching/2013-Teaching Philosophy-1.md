@@ -1,5 +1,5 @@
 ---
-title: "[Teaching Philosophy](https://www.dropbox.com/preview/Teaching_Philosophy.pdf?context=content_suggestions&role=personal)"
+title: "[Teaching Philosophy](files/Teaching Philosophy.pdf)"
 type: "Economics"
 venue: "SUNY, Albany"
 location: "Albany, NY"
