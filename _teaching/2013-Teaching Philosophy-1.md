@@ -1,5 +1,5 @@
 ---
-title: "[Teaching Philosophy](files/Teaching Philosophy.pdf)"
+title: "[Teaching Philosophy](econpiyush.github.io/files/Teaching Philosophy.pdf)"
 type: "Economics"
 venue: "SUNY, Albany"
 location: "Albany, NY"
