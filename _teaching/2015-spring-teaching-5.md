@@ -5,6 +5,6 @@ venue: "SUNY, Albany"
 location: "Albany, NY"
 date: 2024-06-01
 collection: teaching
-permalink: /teaching/2014-spring-teaching-3
+permalink: /teaching/2014-spring-teaching-5
 ---
 
