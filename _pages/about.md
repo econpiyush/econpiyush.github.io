@@ -14,7 +14,7 @@ redirect_from:
 
 Primary research interests: Finance, Regulatory Economics and Macro-Labor. Other interests: Behavioral Economics and Decision Theory.
 
-[CV] available upon request. Email: (econpiyush@icloud.com)
+CV: Available upon request: [Email](econpiyush@icloud.com)
 
 ====== 
 
