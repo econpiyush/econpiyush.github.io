@@ -21,16 +21,15 @@ repository               : "academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "formal.png"
-  name             : "Piyush Akimitsu"
-  pronouns         : # example: "she/her"  
-  bio              : "Economist by day, musician by night"
-  location         : "Albany, New York"
-  employer         : "SUNY, Albany"
-  institution        : "UW Madison"
-  college         : "VNIT, Nagpur"
-  uri              : # URL
-  email            : "econpiyush@icloud.com" 
+  avatar : "formal.png"
+  name : "Piyush Akimitsu"
+  pronouns : # example: "she/her"
+  bio : >
+    Economist by day, musician by night. 
+    Professional and publication name: Piyush Akimitsu. Official/legal name on transcripts and university records: Piyush Gade.
+  location : "Albany, New York"
+  employer : "SUNY, Albany"
+  # ... (rest of your author fields unchanged)
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
