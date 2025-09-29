@@ -263,23 +263,24 @@
 /*customizing for mobile*/
 @media (max-width: 924px) {
   .author {
-    display: block; // Stacks elements vertically on mobile
+    display: block;
   }
   .author__avatar {
     display: block;
-    width: 100%; // Full width container to unsqueeze the image
-    text-align: center; // Centers the image
+    width: 100%;
+    text-align: center;
   }
   .author__content {
     display: block;
-    padding-left: 0; // Removes side padding for better fit
+    padding-left: 0;
+    text-align: center;
   }
   .author__avatar img {
-    width: 80%; // Wider image using available space; adjust percentage if needed
-    height: auto; // Scales height proportionally, no stretch
-    margin: 0 auto; // Centers image horizontally
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
   }
   .author__urls-wrapper {
-    text-align: center; // Centers follow button if needed
+    text-align: center;
   }
 }
