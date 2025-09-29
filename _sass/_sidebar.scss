@@ -90,12 +90,14 @@
   }
 
   img {
-    max-width: 300px;
-    border-radius: 0%;
+// max-width: 250px;  // commented out
+  border-radius: 0;
+  height: 400px;
+  width: auto;
 
-    @include breakpoint($large) {
-      padding: 5px;
-      border: 1px solid $border-color;
+  @include breakpoint($large) {
+    padding: 5px;
+    border: 1px solid $border-color;
     }
   }
 }
