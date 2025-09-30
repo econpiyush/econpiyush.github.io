@@ -5,7 +5,7 @@ location: "New York City"
 venue: "SUNY Global Center"
 collection: talks
 type: "Tech Booth and Research Poster (startup: AICareMatch)"
-permalink: /talks/2012-03-01-talk-6
+permalink: /talks/2025-09-18-talk-6
 ---
 
 
