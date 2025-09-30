@@ -265,11 +265,6 @@
   .author {
     display: block;
   }
-@media (min-width: 925px) {
-  .author__avatar img {
-    margin-top: 20px; // Adjust this number higher (e.g., 30px) or lower (e.g., 10px) after testing for perfect alignment
-  }
-}
   .author__avatar {
     display: block;
     width: 100%;
@@ -292,5 +287,12 @@
   .author__urls-wrapper button {
     display: block;
     margin: 0 auto;
+  }
+}
+
+/*customizing for desktop*/
+@media (min-width: 925px) {
+  .author__avatar img {
+    margin-top: 20px; // Adjust this number higher (e.g., 30px) or lower (e.g., 10px) after testing for perfect alignment
   }
 }
