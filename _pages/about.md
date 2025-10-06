@@ -20,7 +20,7 @@ Primary research interests: Finance, Regulatory Economics and Labor. Other inter
 
 Working Papers
 ======
-[Regulation, Technology and Provider Redistribution]() - Selected for [13th World Congress of the Econometric Society (ESWC 2025) - August 18 to 22, 2025 COEX in Seoul, South Korea.]()
+[Regulation, Technology and Provider Redistribution](https://www.dropbox.com/scl/fi/vrzb27hu7ssyg8bi0x9gw/JMP_Manuscript_Piyush.pdf?rlkey=btwj0y6pi2la4whnlc4biczbi&st=n6zixwmc&dl=0) - Selected for [13th World Congress of the Econometric Society (ESWC 2025) - August 18 to 22, 2025 COEX in Seoul, South Korea.]()
 
 Effect of Social Media Sentiments on Domestic and Foreign Stock Returns: A Machine Learning Approach - with [Ulrich Hounyo](https://sites.google.com/site/ulrichounyo/) 
 
