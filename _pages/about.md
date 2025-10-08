@@ -14,6 +14,7 @@ redirect_from:
 
 Primary: Financial Economics (Sentiment Analysis, Asset Pricing), Industrial Organization (Economics of Regulation, Price Theory),
 Health & Labor Economics
+
 Secondary interests: Behavioral Economics and Decision Theory.
 
 [CV](https://www.dropbox.com/scl/fi/uwrx9xmfglkti2mujhd2g/Piyush_CV.pdf?rlkey=zpbvzi7panmk2fzi5nq7j17a2&st=4zouktsl&dl=0)
