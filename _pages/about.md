@@ -14,7 +14,7 @@ redirect_from:
 
 Primary research interests: Finance, Regulatory Economics and Labor. Other interests: Behavioral Economics and Decision Theory.
 
-[CV](https://www.dropbox.com/scl/fi/uwrx9xmfglkti2mujhd2g/Piyush_CV.pdf?rlkey=zpbvzi7panmk2fzi5nq7j17a2&st=90rqq08g&dl=0)
+[CV](https://www.dropbox.com/scl/fi/uwrx9xmfglkti2mujhd2g/Piyush_CV.pdf?rlkey=zpbvzi7panmk2fzi5nq7j17a2&st=4zouktsl&dl=0)
 
 ====== 
 
