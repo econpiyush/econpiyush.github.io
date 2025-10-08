@@ -13,7 +13,7 @@ redirect_from:
 
 
 Primary: Financial Economics (Sentiment Analysis, Asset Pricing), Industrial Organization (Economics of Regulation, Price Theory),
-Health & Labor Economics
+Health & Labor Economics.
 
 Secondary interests: Behavioral Economics and Decision Theory.
 
