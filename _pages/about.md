@@ -52,7 +52,7 @@ participation among those with ESHI on average. The triple DiD estimates show th
 job than before (compared to those in non-expansion states without ESHI), indicating “on-the-job search” (OTJS). This provides
 suggestive evidence that Medicaid Expansion released the job lock, as predicted by the search and matching framework.
 
-Resting
+Earlier Research
 ======
 
 [Breaking Piggy Banks: Decoding Savings During Crises]()
