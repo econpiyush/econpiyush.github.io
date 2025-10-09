@@ -32,7 +32,7 @@ have similar conducive effects, while Cost Parity has an unfavorable effect on s
 effects amplified progressively with broadband. For non-metro areas, Price Floor and Price Ceiling have conducive effect on service
 quantity and unfavorable effect on physician density, indicating efficiency gains.
 
-Effect of Social Media Sentiments on Domestic and Foreign Stock Returns: A Machine Learning Approach - with [Ulrich Hounyo](https://sites.google.com/site/ulrichounyo/) 
+[Effect of Social Media Sentiments on Domestic and Foreign Stock Returns: A Machine Learning Approach]() - with [Ulrich Hounyo](https://sites.google.com/site/ulrichounyo/) 
 
 Abstract: This paper predicts stock market performance using sentiment analysis from social media, powered by novel prediction
 methods to measure prediction confidence. We examine how social media and news sentiment differentially impact foreign and
