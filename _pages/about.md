@@ -23,7 +23,7 @@ Secondary interests: Behavioral Economics and Decision Theory.
 
 Working Papers
 ======
-[Regulation, Technology and Provider Redistribution]() - Selected for 13th World Congress of the Econometric Society (ESWC 2025), Seoul, South Korea. Presented at AMES, 2024, and EEA (CSWEP), 2024. [Summary of Contributions](https://www.dropbox.com/scl/fi/gw2mrddljugt1yfmnb4a0/JMP_Contributions.pdf?rlkey=ei5fgowgz17orms5wsxq5ffcr&st=1kp29tg3&dl=0)
+[How Do Regulations and Technology Affect Service Allocation and Market Structure?](https://www.dropbox.com/scl/fi/vrzb27hu7ssyg8bi0x9gw/JMP_Manuscript_Piyush.pdf?rlkey=btwj0y6pi2la4whnlc4biczbi&st=pddxrfx9&dl=0) - Selected for 13th World Congress of the Econometric Society (ESWC 2025), Seoul, South Korea. Presented at AMES, 2024, and EEA (CSWEP), 2024. [Summary of Contributions](https://www.dropbox.com/scl/fi/gw2mrddljugt1yfmnb4a0/JMP_Contributions.pdf?rlkey=ei5fgowgz17orms5wsxq5ffcr&st=1kp29tg3&dl=0) Previous version: [Regulation, Technology and Provider Redistribution]()
 
 Abstract: The paper estimates the effects of Price Controls and Cost Controls on healthcare service quantity and their role in spatial
 restructuring of physician market. Exploiting the quasi-experimental variation in regulatory-technological environment generated
