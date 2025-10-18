@@ -85,7 +85,7 @@
     display: block;
     width: auto;
     height: auto;
-    text-align: center;  /* Add this to center the image */
+    text-align: center;  /* Centers the image */
   }
   img {
     // max-width: 250px; // commented out
@@ -93,10 +93,11 @@
     height: 300px;
     width: auto;
     @include breakpoint($large) {
-      padding: 5px;
-      border: 1px solid $border-color;
-      display: block;       /* Add this to treat the img as block for better centering */
-      margin: 0 auto;       /* Add this to horizontally center the image */
+      padding: 0;               /* Remove padding to eliminate box inner space */
+      border: none;             /* Remove border to eliminate the 'weird box' */
+      display: block;
+      margin: 0 auto;           /* Centers the image */
+      margin-bottom: 5px;       /* Add small space below image before name; adjust if needed */
     }
   }
 }
@@ -112,19 +113,25 @@
     width: 100%;
     padding-left: 0;
     padding-right: 0;
-    text-align: center;  /* Add this to center the name, bio, etc. */
+    text-align: center;  /* Centers name, bio, etc. */
+    margin-top: 0;       /* Remove top margin to pull content higher */
   }
 }
 
 .author__name {
   margin: 0;
+  @include breakpoint($large) {
+    margin-top: 5px;     /* Reduce from 10px to pull name closer to image */
+    margin-bottom: 5px;  /* Reduce from 10px for tighter spacing */
+  }
+}
 
-    @include breakpoint($large) {
-      padding: 5px;
-      border: 1px solid $border-color;
-      height: 200px;  /* Adjust this value lower (e.g., 150px or 250px) to reduce height further */
-      width: auto;    /* Preserves aspect ratio */
-    }
+.author__bio {
+  margin: 0;
+  @include breakpoint($large) {
+    margin-top: 5px;     /* Reduce from 10px to pull location/employer closer to name */
+    margin-bottom: 10px; /* Reduce from 20px for less space before social links */
+  }
 }
 .sidebar .author__name {
   font-family: $sans-serif;
