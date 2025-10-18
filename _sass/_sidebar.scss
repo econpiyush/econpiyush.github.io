@@ -75,29 +75,28 @@
 /*
    Author profile and links
    ========================================================================== */
-
 .author__avatar {
   display: table-cell;
   vertical-align: top;
   width: 150px;
   // set width only, for non-square avatars
   // height: 36px;
-
   @include breakpoint($large) {
     display: block;
     width: auto;
     height: auto;
+    text-align: center;  /* Add this to center the image */
   }
-
   img {
-// max-width: 250px;  // commented out
-  border-radius: 0;
-  height: 250px;
-  width: auto;
-
-  @include breakpoint($large) {
-    padding: 5px;
-    border: 1px solid $border-color;
+    // max-width: 250px; // commented out
+    border-radius: 0;
+    height: 300px;
+    width: auto;
+    @include breakpoint($large) {
+      padding: 5px;
+      border: 1px solid $border-color;
+      display: block;       /* Add this to treat the img as block for better centering */
+      margin: 0 auto;       /* Add this to horizontally center the image */
     }
   }
 }
@@ -108,12 +107,12 @@
   padding-left: 15px;
   padding-right: 25px;
   line-height: 1;
-
   @include breakpoint($large) {
     display: block;
     width: 100%;
     padding-left: 0;
     padding-right: 0;
+    text-align: center;  /* Add this to center the name, bio, etc. */
   }
 }
 
