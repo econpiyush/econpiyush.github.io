@@ -90,7 +90,7 @@
   img {
     // max-width: 250px; // commented out
     border-radius: 0;
-    height: 275px;
+    height: 250px;
     width: auto;
     @include breakpoint($large) {
       padding: 0;               /* Remove padding to eliminate box inner space */
