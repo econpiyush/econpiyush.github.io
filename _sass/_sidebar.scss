@@ -296,8 +296,11 @@
     display: block;
     margin: 0 auto;
   }
+  /* Add this new rule here */
+  .author__name {
+    margin-left: 10px;  /* Shifts the name slightly right; tweak the px value as needed for alignment above Follow */
+  }
 }
-
 /*customizing for desktop*/
 @media (min-width: 925px) {
   .author__avatar img {
