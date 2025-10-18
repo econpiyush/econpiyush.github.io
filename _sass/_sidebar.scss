@@ -293,8 +293,8 @@
 /*customizing for desktop*/
 @media (min-width: 925px) {
   .author__avatar img {
-    margin-top: 20px; // Your existing property
-    height: 250px;  /* Adjust this to your desired smaller height, e.g., 200px or 250px */
+    margin-top: 30px; // Your existing property
+    height: 200px;  /* Adjust this to your desired smaller height, e.g., 200px or 250px */
     width: auto;    /* Keeps aspect ratio */
   }
 }
