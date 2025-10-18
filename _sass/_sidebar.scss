@@ -120,10 +120,12 @@
 .author__name {
   margin: 0;
 
-  @include breakpoint($large) {
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
+    @include breakpoint($large) {
+      padding: 5px;
+      border: 1px solid $border-color;
+      height: 200px;  /* Adjust this value lower (e.g., 150px or 250px) to reduce height further */
+      width: auto;    /* Preserves aspect ratio */
+    }
 }
 .sidebar .author__name {
   font-family: $sans-serif;
