@@ -17,7 +17,6 @@ Secondary: Labor Economics · Behavioral Economics
 
 [CV (updated November 21, 2025)](https://www.dropbox.com/scl/fi/uwrx9xmfglkti2mujhd2g/Piyush_CV.pdf?rlkey=zpbvzi7panmk2fzi5nq7j17a2&st=4zouktsl&dl=0) · 
 [email](mailto:econpiyush@icloud.com) · 
-[GitHub](https://github.com/econpiyush) · 
 [JOE](https://www.aeaweb.org/joe/candidate/search) · 
 
 
