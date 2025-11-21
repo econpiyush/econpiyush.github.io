@@ -19,7 +19,7 @@ Secondary: Labor Economics · Behavioral Economics
 [email](mailto:econpiyush@icloud.com) · 
 [GitHub](https://github.com/econpiyush) · 
 [JOE](https://www.aeaweb.org/joe/candidate/search) · 
-[ORCID](https://orcid.org/)
+
 
 ======
 Working Papers
