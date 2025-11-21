@@ -12,8 +12,8 @@ redirect_from:
 </center>
 
 **Fields**  
-Primary: Health Economics · Industrial Organization · Public Finance · Financial Economics  
-Secondary: Labor Economics · Behavioral Economics
+Primary: Financial Economics (Sentiment Analysis, Asset Pricing) · Industrial Organization (Economics of Regulation, Price Theory) · Health & Labor Economics  
+Secondary: Behavioral Economics and Decision Theory
 
 [CV (updated November 21, 2025)](https://www.dropbox.com/scl/fi/uwrx9xmfglkti2mujhd2g/Piyush_CV.pdf?rlkey=zpbvzi7panmk2fzi5nq7j17a2&st=4zouktsl&dl=0) · 
 [email](mailto:econpiyush@icloud.com) · 
