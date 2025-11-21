@@ -30,7 +30,6 @@ Working Papers
 Selected for 13th World Congress of the Econometric Society (ESWC 2025), Seoul.  
 Presented at Asia Meeting of the Econometric Society (AMES) 2024 and Eastern Economic Association (CSWEP session) 2024.  
 [Summary of Contributions](https://www.dropbox.com/scl/fi/gw2mrddljugt1yfmnb4a0/JMP_Contributions.pdf?rlkey=ei5fgowgz17orms5wsxq5ffcr&st=1kp29tg3&dl=0)  
-[PDF](https://www.dropbox.com/scl/fi/vrzb27hu7ssyg8bi0x9gw/JMP_Manuscript_Piyush.pdf?rlkey=btwj0y6pi2la4whnlc4biczbi&st=pddxrfx9&dl=0)
 
 Abstract: This paper estimates the effects of price controls and cost controls on healthcare service quantity and their role in the spatial restructuring of physician markets. Exploiting quasi-experimental variation from telehealth parity laws and broadband internet, I find that price floors and ceilings generally increase service quantity, while cost parity reduces it, with effects amplified by broadband access. In non-metro areas, these regulations improve efficiency by increasing quantity while reducing physician density.
 
