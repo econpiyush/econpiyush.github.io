@@ -61,18 +61,18 @@ redirect_from:
     </div>
   </div>
 
-  <div style="margin-bottom: 18px; padding-bottom: 12px; border-bottom: 1px solid #666;">
+<div style="margin-bottom: 18px; padding-bottom: 12px; border-bottom: 1px solid #666;">
     <div style="font-size: 1.05em; font-weight: bold; color: #000; margin-bottom: 4px;">
       Effect of Social Media Sentiments on Domestic and Foreign Stock Returns: A Machine Learning Approach
     </div>
     <div style="color: #555; margin-bottom: 4px; font-style: italic; font-size: 0.92em;">
-      (with Ulrich Hounyo)
+      (with <a href="https://sites.google.com/site/ulrichounyo/" style="color: #2c5aa0; text-decoration: none;">Ulrich Hounyo</a>)
     </div>
     <div style="color: #333; line-height: 1.4; font-size: 0.9em;">
       <strong style="color: #000;">Abstract:</strong> This paper predicts stock market performance using sentiment analysis from social media and novel prediction-confidence methods. We show social media and news sentiment differentially affect foreign and domestic stocks and use clustering and VAR methods to trace impulse responses to financial uncertainty and consumption shocks.
     </div>
   </div>
-
+  
   <div style="margin-bottom: 12px;">
     <div style="font-size: 1.05em; font-weight: bold; color: #000; margin-bottom: 4px;">
       Medicaid Expansion: The Key that Opens the Job Lock?
