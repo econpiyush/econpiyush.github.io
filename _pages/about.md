@@ -34,7 +34,7 @@ redirect_from:
       <span style="color: #2c5aa0; font-weight: normal; font-size: 0.95em;">Job Market Paper</span><br>
       How Do Regulations and Technology Affect Service Allocation and Market Structure?
     </div>
-    <div style="color: #555; margin-bottom: 3px; font-style: italic; font-size: 0.92em;">
+    <div style="color: #000; margin-bottom: 3px; font-weight: bold; font-style: italic; font-size: 0.92em;">
       Under review – RAND Journal of Economics (submitted September 2025)
     </div>
     <div style="color: #555; margin-bottom: 4px; font-size: 0.9em;">
@@ -53,7 +53,7 @@ redirect_from:
     <div style="font-size: 1.05em; font-weight: bold; color: #000; margin-bottom: 4px;">
       Regulating Physician Reimbursements and Consumer Out-of-Pocket Costs: Implications for Medicare Costs
     </div>
-    <div style="color: #555; margin-bottom: 4px; font-style: italic; font-size: 0.92em;">
+    <div style="color: #000; margin-bottom: 4px; font-weight: bold; font-style: italic; font-size: 0.92em;">
       Under review – Journal of Policy Analysis and Management (submitted October 2025) · Solo-authored
     </div>
     <div style="color: #333; line-height: 1.4; font-size: 0.9em;">
