@@ -305,7 +305,7 @@
 @media (min-width: 925px) {
   .author__avatar img {
     margin-top: 30px; // Your existing property
-    width: auto; /* Set this to your desired width (e.g., 280px for a little wider; increase to 300px or more if needed) */
+    width: 230; /* Set this to your desired width (e.g., 280px for a little wider; increase to 300px or more if needed) */
     height: 260px; /* Keeps aspect ratio */
     max-width: 100%; /* Optional: Add this to prevent overflow if the sidebar is narrow */
   }
