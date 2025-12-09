@@ -45,7 +45,7 @@ redirect_from:
       <a href="https://www.dropbox.com/scl/fi/gw2mrddljugt1yfmnb4a0/JMP_Contributions.pdf?rlkey=ei5fgowgz17orms5wsxq5ffcr&st=1kp29tg3&dl=0" style="color: #2c5aa0; text-decoration: none; font-size: 0.92em;">Summary of Contributions</a>
     </div>
     <div style="color: #333; line-height: 1.4; font-size: 0.9em;">
-      <strong style="color: #000;">Abstract:</strong> This paper estimates the effects of price controls and cost controls on healthcare service quantity and their role in the spatial restructuring of physician markets. Exploiting quasi-experimental variation from telehealth parity laws and broadband internet, I find that price floors and ceilings generally increase service quantity, while cost parity reduces it, with effects amplified by broadband access. In non-metro areas, these regulations improve efficiency by increasing quantity while reducing physician density.
+      <strong style="color: #000;">Abstract:</strong> This paper estimates the effects of price controls and cost controls on healthcare service quantity and their role in the spatial restructuring of physician markets. Exploiting quasi-experimental variation from telehealth parity laws and broadband internet, I find that price floors and ceilings increase service quantity, while cost parity reduces it, with these effects amplified progressively with increased broadband access. In non-metro areas, these regulations improve efficiency by increasing quantity while reducing physician density.
     </div>
   </div>
 
@@ -57,7 +57,7 @@ redirect_from:
       Under review – Journal of Policy Analysis and Management (submitted October 2025) · Solo-authored
     </div>
     <div style="color: #333; line-height: 1.4; font-size: 0.9em;">
-      <strong style="color: #000;">Abstract:</strong> This paper studies the impact of telehealth parity laws on Medicare costs, exploiting state-level variation in regulatory framing. Non-binding regulations (price ceiling and cost ceiling) reduce Medicare costs by preserving telehealth's cost advantages and shifting more cost-sharing to consumers. Binding regulations (price floor and cost parity) have near-zero net effects. Cost-reducing effects diminish with higher broadband penetration. The findings highlight how technological and regional variation shape effective healthcare regulation design.
+      <strong style="color: #000;">Abstract:</strong> This paper studies the impact of telehealth parity laws on Medicare costs, exploiting state-level variation in regulatory framing. Non-binding regulations (price ceiling and cost ceiling) reduce Medicare costs by preserving telehealth's cost advantages and shifting more cost-sharing to consumers. Binding regulations (price floor and cost parity) have near-zero net effects. Cost-reducing effects diminish with higher broadband penetration. The findings highlight how technological and regional variation shape financial implicatiions of healthcare regulation.
     </div>
   </div>
 
