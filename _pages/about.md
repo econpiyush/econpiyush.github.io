@@ -14,7 +14,7 @@ redirect_from:
   <div style="margin-bottom: 18px; padding-bottom: 12px; border-bottom: 2px solid #333;">
     <h3 style="color: #2c5aa0; font-size: 1.1em; margin-bottom: 6px;">Fields</h3>
     <div style="color: #333; margin-bottom: 4px;">
-      <strong style="color: #000;">Primary:</strong> Financial Economics (Sentiment Analysis, Asset Pricing) · Industrial Organization (Economics of Regulation, Price Theory) · Health & Labor Economics
+      <strong style="color: #000;">Primary:</strong> Industrial Organization (Economics of Regulation, Price Theory) · Health & Labor Economics · Financial Economics (Sentiment Analysis, Asset Pricing) 
     </div>
     <div style="color: #333;">
       <strong style="color: #000;">Secondary:</strong> Behavioral Economics and Decision Theory
