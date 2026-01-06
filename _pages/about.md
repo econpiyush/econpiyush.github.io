@@ -54,7 +54,7 @@ redirect_from:
       Regulating Physician Reimbursements and Consumer Out-of-Pocket Costs: Implications for Medicare Costs
     </div>
     <div style="color: #000; margin-bottom: 4px; font-weight: bold; font-style: italic; font-size: 0.92em;">
-      Under review – Journal of Policy Analysis and Management (submitted October 2025) · Solo-authored
+    
     </div>
     <div style="color: #333; line-height: 1.4; font-size: 0.9em;">
       <strong style="color: #000;">Abstract:</strong> This paper studies the impact of telehealth parity laws on Medicare costs, exploiting state-level variation in regulatory framing. Non-binding regulations (price ceiling and cost ceiling) reduce Medicare costs by preserving telehealth's cost advantages and shifting more cost-sharing to consumers. Binding regulations (price floor and cost parity) have near-zero net effects. Cost-reducing effects diminish with higher broadband penetration. The findings highlight how technological and regional variation shape financial implicatiions of healthcare regulation.
