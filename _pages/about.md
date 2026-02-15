@@ -24,7 +24,8 @@ redirect_from:
   <div style="margin-bottom: 18px; padding-bottom: 12px; border-bottom: 2px solid #333; text-align: center;">
     <a href="https://www.dropbox.com/scl/fi/uwrx9xmfglkti2mujhd2g/Piyush_CV.pdf?rlkey=zpbvzi7panmk2fzi5nq7j17a2&st=4zouktsl&dl=0" style="color: #2c5aa0; text-decoration: none; margin: 0 12px;">CV (updated January 07, 2026)</a> · 
     <a href="mailto:pgade@albany.edu" style="color: #2c5aa0; text-decoration: none; margin: 0 12px;">Email</a> · 
-    <a href="https://www.aeaweb.org/joe/candidates/candidate_profile_view.php?jcand=iax4jM_88esRU4-iRc4rlVUZYBoC999Q" style="color: #2c5aa0; text-decoration: none; margin: 0 12px;">JOE</a>
+    <a href="https://www.aeaweb.org/joe/candidates/candidate_profile_view.php?jcand=iax4jM_88esRU4-iRc4rlVUZYBoC999Q" style="color: #2c5aa0; text-decoration: none; margin: 0 12px;">JOE</a> · 
+    <a href="https://x.com/econpi" style="color: #2c5aa0; text-decoration: none; margin: 0 12px;">X/Twitter</a>
   </div>
 
   <h2 style="color: #2c5aa0; font-size: 1.4em; letter-spacing: 0.3px; margin-bottom: 15px; text-align: center;">Working Papers</h2>
@@ -57,28 +58,7 @@ redirect_from:
     
     </div>
     <div style="color: #333; line-height: 1.4; font-size: 0.9em;">
-      <strong style="color: #000;">Abstract:</strong> This paper studies the impact of telehealth parity laws on Medicare costs, exploiting state-level variation in regulatory framing. Non-binding regulations (price ceiling and cost ceiling) reduce Medicare costs by preserving telehealth's cost advantages and shifting more cost-sharing to consumers. Binding regulations (price floor and cost parity) have near-zero net effects. Cost-reducing effects diminish with higher broadband penetration. The findings highlight how technological and regional variation shape financial implicatiions of healthcare regulation.
-    </div>
-  </div>
-
-<div style="margin-bottom: 18px; padding-bottom: 12px; border-bottom: 1px solid #666;">
-    <div style="font-size: 1.05em; font-weight: bold; color: #000; margin-bottom: 4px;">
-      Effect of Social Media Sentiments on Domestic and Foreign Stock Returns: A Machine Learning Approach
-    </div>
-    <div style="color: #555; margin-bottom: 4px; font-style: italic; font-size: 0.92em;">
-      (with <a href="https://sites.google.com/site/ulrichounyo/" style="color: #2c5aa0; text-decoration: none;">Ulrich Hounyo</a>)
-    </div>
-    <div style="color: #333; line-height: 1.4; font-size: 0.9em;">
-      <strong style="color: #000;">Abstract:</strong> This paper predicts stock market performance using sentiment analysis from social media and novel prediction-confidence methods. We show social media and news sentiment differentially affect foreign and domestic stocks and use clustering and VAR methods to trace impulse responses to financial uncertainty and consumption shocks.
-    </div>
-  </div>
-  
-  <div style="margin-bottom: 12px;">
-    <div style="font-size: 1.05em; font-weight: bold; color: #000; margin-bottom: 4px;">
-      Medicaid Expansion: The Key that Opens the Job Lock?
-    </div>
-    <div style="color: #333; line-height: 1.4; font-size: 0.9em;">
-      <strong style="color: #000;">Abstract:</strong> Using search theory and a triple-difference design, I examine Medicaid expansion's effect on job search and labor market outcomes. Preliminary results suggest small or insignificant effects on employment but suggestive evidence of increased "on-the-job search," consistent with reduced job lock.
+      <strong style="color: #000;">Abstract:</strong> This paper studies the impact of telehealth parity laws on Medicare costs, exploiting state-level variation in regulatory framing. Non-binding regulations (price ceiling and cost ceiling) reduce Medicare costs by preserving telehealth's cost advantages and shifting more cost-sharing to consumers. Binding regulations (price floor and cost parity) have near-zero net effects. Cost-reducing effects diminish with higher broadband penetration. The findings highlight how technological and regional variation shape financial implications of healthcare regulation.
     </div>
   </div>
 </div>
