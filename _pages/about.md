@@ -52,7 +52,7 @@ redirect_from:
 
   <div style="margin-bottom: 18px; padding-bottom: 12px; border-bottom: 1px solid #666;">
     <div style="font-size: 1.05em; font-weight: bold; color: #000; margin-bottom: 4px;">
-      Regulating Physician Reimbursements and Consumer Out-of-Pocket Costs: Implications for Medicare Costs
+      Effect of Parity Laws on Medicare Costs
     </div>
     <div style="color: #000; margin-bottom: 4px; font-weight: bold; font-style: italic; font-size: 0.92em;">
     
