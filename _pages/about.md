@@ -32,7 +32,7 @@ redirect_from:
       How Do Regulations and Technology Affect Service Allocation and Market Structure?
     </div>
     <div style="color: #000; margin-bottom: 3px; font-weight: bold; font-style: italic; font-size: 0.92em;">
-      Under review – RAND Journal of Economics (submitted September 2025)
+      Under review 
     </div>
     <div style="color: #555; margin-bottom: 4px; font-size: 0.9em;">
       Selected for 13th World Congress of the Econometric Society (ESWC 2025), Seoul.<br>
