@@ -1,0 +1,1849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AICareMatch - Demo Day Presentation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; font-family: system-ui, -apple-system, sans-serif; }
+        .slide { 
+            display: none; 
+            width: 100vw; 
+            height: calc(100vh - 80px);
+            overflow-y: auto;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        .slide.active { display: block; }
+        
+        /* Special reduced padding for demo slides */
+        .slide[data-slide="4"], .slide[data-slide="5"] {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+        .animate-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+        .fade-in { animation: fadeIn 0.8s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        
+        /* Timeline styling for roadmap */
+        .timeline-connector {
+            position: relative;
+        }
+        .timeline-connector::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(to right, #2563eb, #9333ea, #16a34a, #ea580c);
+            transform: translateY(-50%);
+            z-index: 0;
+        }
+        .timeline-dot {
+            position: relative;
+            z-index: 1;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin: 0 auto 10px;
+            border: 4px solid white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .grid-cols-2 { grid-template-columns: 1fr; }
+            .grid-cols-3 { grid-template-columns: 1fr; }
+            .grid-cols-4 { grid-template-columns: 1fr; }
+            .slide { padding-top: 15px; padding-bottom: 15px; }
+        }
+    </style>
+</head>
+<body class="bg-black">
+
+<!-- Slide 1: Title -->
+<div class="slide active" data-slide="1">
+    <div class="h-full w-full bg-gradient-to-br from-blue-900 via-purple-900 to-pink-900 text-white flex flex-col items-center justify-center p-8">
+        <img src="https://aicarematch.tech/rs=w-1200,h-600,cg-true.webp" alt="AICareMatch Logo" class="w-28 h-28 mb-6 animate-pulse object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <svg class="w-28 h-28 mb-6 animate-pulse" style="display:none;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+        </svg>
+        <h1 class="text-7xl font-bold mb-4">AICareMatch</h1>
+        <p class="text-3xl mb-3 text-center">AI-Driven Mental Health Matching Platform</p>
+        <p class="text-xl opacity-90 mb-8">Making Mental Health Care Accessible</p>
+        <div class="text-lg space-y-1 text-center">
+            <p>Piyush Gade, Founder</p>
+            <p class="mt-4">RISE Demo Day • October 2025</p>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 2: The Crisis -->
+<div class="slide" data-slide="2">
+    <div class="h-full w-full bg-gradient-to-br from-red-50 to-orange-50 p-8 overflow-auto">
+        <h2 class="text-5xl font-bold text-red-900 mb-4">The Crisis: A Perfect Storm</h2>
+        <p class="text-xl text-gray-700 mb-6 max-w-6xl">Mental health care in America faces three interconnected crises creating a $1T+ annual economic burden</p>
+        
+        <div class="grid grid-cols-3 gap-4 max-w-7xl mx-auto mb-4">
+            <div class="space-y-3">
+                <div class="bg-gradient-to-br from-red-600 to-red-700 text-white rounded-2xl p-5 shadow-2xl">
+                    <h3 class="text-2xl font-bold mb-3">😰 DEMAND CRISIS</h3>
+                    <div class="text-4xl font-bold mb-2">52M</div>
+                    <p class="text-lg">U.S. adults with mental illness (SAMHSA 2023)</p>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-4 shadow-xl border-l-4 border-red-600">
+                    <h4 class="font-bold text-base mb-2 text-red-900">🚧 Unmet Need</h4>
+                    <p class="text-gray-700 mb-2 text-sm">2-4 month wait times, cost barriers, lack of provider knowledge</p>
+                    <div class="space-y-1 text-xs">
+                        <div class="flex items-start gap-2">
+                            <div class="text-red-600 font-bold">💰</div>
+                            <div><span class="font-bold">45.8%</span> cite cost concerns</div>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <div class="text-red-600 font-bold">❓</div>
+                            <div><span class="font-bold">29.2%</span> don't know where to find providers</div>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <div class="text-red-600 font-bold">🚧</div>
+                            <div><span class="font-bold">24.9%</span> face stigma/access barriers</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-3">
+                <div class="bg-gradient-to-br from-orange-600 to-orange-700 text-white rounded-2xl p-5 shadow-2xl">
+                    <h3 class="text-2xl font-bold mb-3">😓 SUPPLY CRISIS</h3>
+                    <div class="text-4xl font-bold mb-2">250K</div>
+                    <p class="text-lg">Projected provider shortage by 2030</p>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-4 shadow-xl border-l-4 border-orange-600">
+                    <h4 class="font-bold text-base mb-2 text-orange-900">🔥 Provider Burnout</h4>
+                    <p class="text-gray-700 mb-2 text-sm"><span class="font-bold">60% burnout rate</span> among mental health providers</p>
+                    <div class="space-y-1 text-xs">
+                        <div class="flex items-start gap-2">
+                            <div class="text-orange-600 font-bold">📄</div>
+                            <div><span class="font-bold">30-40%</span> of time spent on admin documentation</div>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <div class="text-orange-600 font-bold">💸</div>
+                            <div>Low reimbursement rates</div>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <div class="text-orange-600 font-bold">❌</div>
+                            <div>High patient no-show rates</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-3">
+                <div class="bg-gradient-to-br from-purple-600 to-purple-700 text-white rounded-2xl p-5 shadow-2xl">
+                    <h3 class="text-2xl font-bold mb-3">🎯 MISMATCH CRISIS</h3>
+                    <div class="text-4xl font-bold mb-2">$1T+</div>
+                    <p class="text-lg">Annual economic burden from inefficiency</p>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-4 shadow-xl border-l-4 border-purple-600">
+                    <h4 class="font-bold text-base mb-2 text-purple-900">⚠️ Inefficient Care</h4>
+                    <p class="text-gray-700 mb-2 text-sm">Patients matched with wrong providers → frivolous visits</p>
+                    <div class="space-y-1 text-xs">
+                        <div class="flex items-start gap-2">
+                            <div class="text-purple-600 font-bold">🔀</div>
+                            <div>Psychiatrists treating all conditions (not specialized)</div>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <div class="text-purple-600 font-bold">❌</div>
+                            <div>Mismatched therapy approaches → ineffective treatment</div>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <div class="text-purple-600 font-bold">💸</div>
+                            <div>Wasted visits, prolonged suffering</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-4 max-w-7xl mx-auto">
+            <div class="bg-blue-50 rounded-2xl p-4 border-2 border-blue-300">
+                <div class="text-2xl mb-2">💬</div>
+                <p class="text-gray-800 italic mb-2 text-sm">"It has been very hard to find someone who will provide the right evidence-based therapy for my son in NYC."</p>
+                <p class="text-xs text-gray-600 font-semibold">— PhD Psychologist, Director of Mental Health Center</p>
+            </div>
+
+            <div class="bg-green-50 rounded-2xl p-4 border-2 border-green-300">
+                <div class="text-2xl mb-2">💬</div>
+                <p class="text-gray-800 italic mb-2 text-sm">"It would be a dream come true if a platform could reduce our administrative burnout."</p>
+                <p class="text-xs text-gray-600 font-semibold">— Geriatric Psychiatrist, New York City</p>
+            </div>
+
+            <div class="bg-purple-50 rounded-2xl p-4 border-2 border-purple-300">
+                <div class="text-2xl mb-2">💬</div>
+                <p class="text-gray-800 italic mb-2 text-sm">"I was prescribed incorrect care. I need someone with experience treating first responders."</p>
+                <p class="text-xs text-gray-600 font-semibold">— First Responder, Customer Discovery Interview</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 3: Our Solution -->
+<div class="slide" data-slide="3">
+    <div class="h-full w-full bg-gradient-to-br from-blue-50 to-purple-50 p-8 overflow-auto">
+        <h2 class="text-5xl font-bold text-blue-900 mb-6">Our Solution</h2>
+        <p class="text-xl text-gray-700 mb-6 max-w-5xl">AICareMatch: HIPAA-compliant marketplace connecting patients with tailored mental health providers</p>
+        <div class="grid grid-cols-3 gap-4 max-w-7xl mx-auto">
+            <div class="bg-white rounded-2xl p-5 shadow-xl border-t-4 border-blue-600">
+                <div class="text-4xl mb-2">🧠</div>
+                <h3 class="text-lg font-bold mb-2">AI Matching</h3>
+                <p class="text-gray-700 text-sm">Connects patients with optimal providers based on specialty, insurance, availability</p>
+            </div>
+            <div class="bg-white rounded-2xl p-5 shadow-xl border-t-4 border-green-600">
+                <div class="text-4xl mb-2">💰</div>
+                <h3 class="text-lg font-bold mb-2">Cost Transparency</h3>
+                <p class="text-gray-700 text-sm">Real-time out-of-pocket calculation before booking (deductibles, copays, coinsurance)</p>
+            </div>
+            <div class="bg-white rounded-2xl p-5 shadow-xl border-t-4 border-purple-600">
+                <div class="text-4xl mb-2">📈</div>
+                <h3 class="text-lg font-bold mb-2">Shortage Forecasting</h3>
+                <p class="text-gray-700 text-sm">Predicts provider shortages using HPSA/MUA scores for workforce planning</p>
+            </div>
+            <div class="bg-white rounded-2xl p-5 shadow-xl border-t-4 border-orange-600">
+                <div class="text-4xl mb-2">⚡</div>
+                <h3 class="text-lg font-bold mb-2">Admin Automation</h3>
+                <p class="text-gray-700 text-sm">Reduces provider burnout by 60% through automated documentation</p>
+            </div>
+            <div class="bg-white rounded-2xl p-5 shadow-xl border-t-4 border-red-600">
+                <div class="text-4xl mb-2">🛡️</div>
+                <h3 class="text-lg font-bold mb-2">HIPAA-Telehealth Parity Laws-Licensure</h3>
+                <p class="text-gray-700 text-sm">Compliant cross-state virtual care with automated licensing checks</p>
+            </div>
+            <div class="bg-white rounded-2xl p-5 shadow-xl border-t-4 border-indigo-600">
+                <div class="text-4xl mb-2">❤️</div>
+                <h3 class="text-lg font-bold mb-2">Social Responsibility</h3>
+                <p class="text-gray-700 text-sm">Accessible to pregnant women, first responders, senior citizens</p>
+            </div>
+        </div>
+        <div class="mt-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-3xl p-4 max-w-7xl mx-auto">
+            <div class="text-center text-xl font-bold">
+                Reduces wait times 50% • Eliminates surprise billing • Bridges gaps for underserved populations
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 4: Patient Demo - OPTIMIZED SPACING -->
+
+<!-- Slide 4: Patient Demo - Step 1 (Condition Awareness) -->
+<div class="slide" data-slide="4">
+    <div class="h-full w-full bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 p-4 flex items-center justify-center">
+        <div class="max-w-7xl w-full">
+            <h2 class="text-3xl font-bold text-center text-white mb-2">Patient Experience Demo</h2>
+            <p class="text-base text-center mb-4 text-blue-200">Watch how Sarah finds her perfect therapist in under 2 minutes</p>
+            
+            <div class="grid grid-cols-2 gap-4">
+                <div class="flex justify-center items-center">
+                    <div class="w-72 h-[480px] bg-white rounded-[3rem] shadow-2xl border-8 border-gray-800 p-4 overflow-hidden">
+                        <div class="bg-gradient-to-br from-blue-600 to-purple-600 text-white rounded-2xl p-4 h-full flex flex-col">
+                            <div class="flex items-center gap-2 mb-4 pb-2 border-b border-white/20">
+                                <div class="text-xl">🧠</div>
+                                <div class="text-lg font-bold">AICareMatch</div>
+                            </div>
+                            <div class="flex-1 overflow-auto text-sm">
+<div class="text-center">
+                                    <div class="text-4xl mb-3">🤔</div>
+                                    <h3 class="text-lg font-bold mb-3">Welcome! Let's find you the right care.</h3>
+                                    <div class="space-y-2">
+                                        <button class="w-full bg-white/20 hover:bg-white/30 rounded-xl p-2 text-left transition-all">
+                                            <div class="font-bold text-sm mb-1">✅ Yes, I know my condition</div>
+                                            <div class="text-xs opacity-90">I need help with a specific diagnosis</div>
+                                        </button>
+                                        <button class="w-full bg-white/20 hover:bg-white/30 rounded-xl p-2 text-left transition-all">
+                                            <div class="font-bold text-sm mb-1">❓ No, I'm not sure</div>
+                                            <div class="text-xs opacity-90">I'll describe how I'm feeling</div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex gap-2 mt-3 justify-center">
+                                <div class="h-2 w-2 rounded-full bg-white"></div>
+                                <div class="h-2 w-2 rounded-full bg-white/30"></div>
+                                <div class="h-2 w-2 rounded-full bg-white/30"></div>
+                                <div class="h-2 w-2 rounded-full bg-white/30"></div>
+                                <div class="h-2 w-2 rounded-full bg-white/30"></div>
+                                <div class="h-2 w-2 rounded-full bg-white/30"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-center space-y-2">
+                    <h3 class="text-2xl font-bold text-white mb-2">6-Step Intelligent Flow</h3>
+                    <div class="p-3 rounded-xl transition-all bg-blue-600 shadow-xl">
+                        <div class="font-bold text-base mb-1 text-white">1️⃣ Condition Awareness</div>
+                        <p class="text-gray-100 text-xs">"Do you know your condition?" If no → "How are you feeling?"</p>
+                    </div>
+                    <div class="p-3 rounded-xl transition-all bg-white/10 border border-white/20">
+                        <div class="font-bold text-base mb-1 text-white">2️⃣ Select Condition</div>
+                        <p class="text-gray-200 text-xs">Choose from Depression, Anxiety, PTSD, or describe symptoms</p>
+                    </div>
+                    <div class="p-3 rounded-xl transition-all bg-white/10 border border-white/20">
+                        <div class="font-bold text-base mb-1 text-white">3️⃣ Treatment History</div>
+                        <p class="text-gray-200 text-xs">"Have you sought therapy for this before?" Helps refine matching</p>
+                    </div>
+                    <div class="p-3 rounded-xl transition-all bg-white/10 border border-white/20">
+                        <div class="font-bold text-base mb-1 text-white">4️⃣ Budget & Insurance</div>
+                        <p class="text-gray-200 text-xs">Set out-of-pocket range and insurance status</p>
+                    </div>
+                    <div class="p-3 rounded-xl transition-all bg-white/10 border border-white/20">
+                        <div class="font-bold text-base mb-1 text-white">5️⃣ Browse Providers</div>
+                        <p class="text-gray-200 text-xs">See specialists within budget, ratings, schedules</p>
+                    </div>
+                    <div class="p-3 rounded-xl transition-all bg-white/10 border border-white/20">
+                        <div class="font-bold text-base mb-1 text-white">6️⃣ Connect & Book</div>
+                        <p class="text-gray-200 text-xs">Select provider, view real costs, book instantly</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Slide 5: Patient Demo - Step 2 (Select Condition) -->
+<div class="slide" data-slide="5">
+    <div class="h-full w-full bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 p-4 flex items-center justify-center">
+        <div class="max-w-7xl w-full">
+            <h2 class="text-3xl font-bold text-center text-white mb-2">Patient Experience Demo</h2>
+            <p class="text-base text-center mb-4 text-blue-200">Watch how Sarah finds her perfect therapist in under 2 minutes</p>
+            
+            <div class="grid grid-cols-2 gap-4">
+                <div class="flex justify-center items-center">
+                    <div class="w-72 h-[480px] bg-white rounded-[3rem] shadow-2xl border-8 border-gray-800 p-4 overflow-hidden">
+                        <div class="bg-gradient-to-br from-blue-600 to-purple-600 text-white rounded-2xl p-4 h-full flex flex-col">
+                            <div class="flex items-center gap-2 mb-4 pb-2 border-b border-white/20">
+                                <div class="text-xl">🧠</div>
+                                <div class="text-lg font-bold">AICareMatch</div>
+                            </div>
+                            <div class="flex-1 overflow-auto text-sm">
+<div>
+                                    <h3 class="text-base font-bold mb-2">What brings you here today?</h3>
+                                    <div class="space-y-2">
+                                        <button class="w-full bg-white/20 hover:bg-white/30 rounded-xl p-2 text-left transition-all text-xs">😔 Depression</button>
+                                        <button class="w-full bg-white/20 hover:bg-white/30 rounded-xl p-2 text-left transition-all text-xs">😰 Anxiety</button>
+                                        <button class="w-full bg-white/20 hover:bg-white/30 rounded-xl p-2 text-left transition-all text-xs">😨 PTSD / Trauma</button>
+                                        <button class="w-full bg-white/20 hover:bg-white/30 rounded-xl p-2 text-left transition-all text-xs">🤱 Postpartum Depression</button>
+                                        <button class="w-full bg-white/20 hover:bg-white/30 rounded-xl p-2 text-left transition-all text-xs">💊 Substance Use</button>
+                                        <button class="w-full bg-white/20 hover:bg-white/30 rounded-xl p-2 text-left transition-all text-xs">✏️ Other / Describe symptoms</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex gap-2 mt-3 justify-center">
+                                <div class="h-2 w-2 rounded-full bg-white/30"></div>
+                                <div class="h-2 w-2 rounded-full bg-white"></div>
+                                <div class="h-2 w-2 rounded-full bg-white/30"></div>
+                                <div class="h-2 w-2 rounded-full bg-white/30"></div>
+                                <div class="h-2 w-2 rounded-full bg-white/30"></div>
+                                <div class="h-2 w-2 rounded-full bg-white/30"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-center space-y-2">
+                    <h3 class="text-2xl font-bold text-white mb-2">6-Step Intelligent Flow</h3>
+                    <div class="p-3 rounded-xl transition-all bg-white/10 border border-white/20">
+                        <div class="font-bold text-base mb-1 text-white">1️⃣ Condition Awareness</div>
+                        <p class="text-gray-200 text-xs">"Do you know your condition?" If no → "How are you feeling?"</p>
+                    </div>
+                    <div class="p-3 rounded-xl transition-all bg-blue-600 shadow-xl">
+                        <div class="font-bold text-base mb-1 text-white">2️⃣ Select Condition</div>
+                        <p class="text-gray-100 text-xs">Choose from Depression, Anxiety, PTSD, or describe symptoms</p>
+                    </div>
+                    <div class="p-3 rounded-xl transition-all bg-white/10 border border-white/20">
+                        <div class="font-bold text-base mb-1 text-white">3️⃣ Treatment History</div>
+                        <p class="text-gray-200 text-xs">"Have you sought therapy for this before?" Helps refine matching</p>
+                    </div>
+                    <div class="p-3 rounded-xl transition-all bg-white/10 border border-white/20">
+                        <div class="font-bold text-base mb-1 text-white">4️⃣ Budget & Insurance</div>
+                        <p class="text-gray-200 text-xs">Set out-of-pocket range and insurance status</p>
+                    </div>
+                    <div class="p-3 rounded-xl transition-all bg-white/10 border border-white/20">
+                        <div class="font-bold text-base mb-1 text-white">5️⃣ Browse Providers</div>
+                        <p class="text-gray-200 text-xs">See specialists within budget, ratings, schedules</p>
+                    </div>
+                    <div class="p-3 rounded-xl transition-all bg-white/10 border border-white/20">
+                        <div class="font-bold text-base mb-1 text-white">6️⃣ Connect & Book</div>
+                        <p class="text-gray-200 text-xs">Select provider, view real costs, book instantly</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Slide 6: Patient Demo - Step 3 (Treatment History) -->
+<div class="slide" data-slide="6">
+    <div class="h-full w-full bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 p-4 flex items-center justify-center">
+        <div class="max-w-7xl w-full">
+            <h2 class="text-3xl font-bold text-center text-white mb-2">Patient Experience Demo</h2>
+            <p class="text-base text-center mb-4 text-blue-200">Watch how Sarah finds her perfect therapist in under 2 minutes</p>
+            
+            <div class="grid grid-cols-2 gap-4">
+                <div class="flex justify-center items-center">
+                    <div class="w-72 h-[480px] bg-white rounded-[3rem] shadow-2xl border-8 border-gray-800 p-4 overflow-hidden">
+                        <div class="bg-gradient-to-br from-blue-600 to-purple-600 text-white rounded-2xl p-4 h-full flex flex-col">
+                            <div class="flex items-center gap-2 mb-4 pb-2 border-b border-white/20">
+                                <div class="text-xl">🧠</div>
+                                <div class="text-lg font-bold">AICareMatch</div>
+                            </div>
+                            <div class="flex-1 overflow-auto text-sm">
+<div>
+                                    <h3 class="text-base font-bold mb-2">Have you sought therapy for this before?</h3>
+                                    <div class="space-y-2">
+                                        <button class="w-full bg-white/20 hover:bg-white/30 rounded-xl p-2 text-left transition-all">
+                                            <div class="font-bold text-xs">✅ Yes, I've been in therapy</div>
+                                            <div class="text-xs opacity-90">Looking to continue or switch</div>
+                                        </button>
+                                        <button class="w-full bg-white/20 hover:bg-white/30 rounded-xl p-2 text-left transition-all">
+                                            <div class="font-bold text-xs">🆕 No, this is my first time</div>
+                                            <div class="text-xs opacity-90">New to mental health care</div>
+                                        </button>
+                                        <button class="w-full bg-white/20 hover:bg-white/30 rounded-xl p-2 text-left transition-all">
+                                            <div class="font-bold text-xs">🤷 Tried before, didn't help</div>
+                                            <div class="text-xs opacity-90">Need a better match</div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex gap-2 mt-3 justify-center">
+                                <div class="h-2 w-2 rounded-full bg-white/30"></div>
+                                <div class="h-2 w-2 rounded-full bg-white/30"></div>
+                                <div class="h-2 w-2 rounded-full bg-white"></div>
+                                <div class="h-2 w-2 rounded-full bg-white/30"></div>
+                                <div class="h-2 w-2 rounded-full bg-white/30"></div>
+                                <div class="h-2 w-2 rounded-full bg-white/30"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-center space-y-2">
+                    <h3 class="text-2xl font-bold text-white mb-2">6-Step Intelligent Flow</h3>
+                    <div class="p-3 rounded-xl transition-all bg-white/10 border border-white/20">
+                        <div class="font-bold text-base mb-1 text-white">1️⃣ Condition Awareness</div>
+                        <p class="text-gray-200 text-xs">"Do you know your condition?" If no → "How are you feeling?"</p>
+                    </div>
+                    <div class="p-3 rounded-xl transition-all bg-white/10 border border-white/20">
+                        <div class="font-bold text-base mb-1 text-white">2️⃣ Select Condition</div>
+                        <p class="text-gray-200 text-xs">Choose from Depression, Anxiety, PTSD, or describe symptoms</p>
+                    </div>
+                    <div class="p-3 rounded-xl transition-all bg-blue-600 shadow-xl">
+                        <div class="font-bold text-base mb-1 text-white">3️⃣ Treatment History</div>
+                        <p class="text-gray-100 text-xs">"Have you sought therapy for this before?" Helps refine matching</p>
+                    </div>
+                    <div class="p-3 rounded-xl transition-all bg-white/10 border border-white/20">
+                        <div class="font-bold text-base mb-1 text-white">4️⃣ Budget & Insurance</div>
+                        <p class="text-gray-200 text-xs">Set out-of-pocket range and insurance status</p>
+                    </div>
+                    <div class="p-3 rounded-xl transition-all bg-white/10 border border-white/20">
+                        <div class="font-bold text-base mb-1 text-white">5️⃣ Browse Providers</div>
+                        <p class="text-gray-200 text-xs">See specialists within budget, ratings, schedules</p>
+                    </div>
+                    <div class="p-3 rounded-xl transition-all bg-white/10 border border-white/20">
+                        <div class="font-bold text-base mb-1 text-white">6️⃣ Connect & Book</div>
+                        <p class="text-gray-200 text-xs">Select provider, view real costs, book instantly</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Slide 7: Patient Demo - Step 4 (Budget & Insurance) -->
+<div class="slide" data-slide="7">
+    <div class="h-full w-full bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 p-4 flex items-center justify-center">
+        <div class="max-w-7xl w-full">
+            <h2 class="text-3xl font-bold text-center text-white mb-2">Patient Experience Demo</h2>
+            <p class="text-base text-center mb-4 text-blue-200">Watch how Sarah finds her perfect therapist in under 2 minutes</p>
+            
+            <div class="grid grid-cols-2 gap-4">
+                <div class="flex justify-center items-center">
+                    <div class="w-72 h-[480px] bg-white rounded-[3rem] shadow-2xl border-8 border-gray-800 p-4 overflow-hidden">
+                        <div class="bg-gradient-to-br from-blue-600 to-purple-600 text-white rounded-2xl p-4 h-full flex flex-col">
+                            <div class="flex items-center gap-2 mb-4 pb-2 border-b border-white/20">
+                                <div class="text-xl">🧠</div>
+                                <div class="text-lg font-bold">AICareMatch</div>
+                            </div>
+                            <div class="flex-1 overflow-auto text-sm">
+<div>
+                                    <h3 class="text-base font-bold mb-2">What's your budget per session?</h3>
+                                    <div class="mb-2">
+                                        <label class="block text-xs mb-1">Insurance</label>
+                                        <select class="w-full bg-white/20 rounded-lg p-2 text-xs">
+                                            <option>I have insurance (Aetna)</option>
+                                            <option>I have insurance (Other)</option>
+                                            <option>No insurance (self-pay)</option>
+                                        </select>
+                                    </div>
+                                    <div class="space-y-2">
+                                        <button class="w-full bg-white/20 hover:bg-white/30 rounded-xl p-2 text-left transition-all text-xs">💰 $0 - $50 per session</button>
+                                        <button class="w-full bg-white/20 hover:bg-white/30 rounded-xl p-2 text-left transition-all text-xs">💵 $50 - $150 per session</button>
+                                        <button class="w-full bg-white/20 hover:bg-white/30 rounded-xl p-2 text-left transition-all text-xs">💸 $150+ per session</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex gap-2 mt-3 justify-center">
+                                <div class="h-2 w-2 rounded-full bg-white/30"></div>
+                                <div class="h-2 w-2 rounded-full bg-white/30"></div>
+                                <div class="h-2 w-2 rounded-full bg-white/30"></div>
+                                <div class="h-2 w-2 rounded-full bg-white"></div>
+                                <div class="h-2 w-2 rounded-full bg-white/30"></div>
+                                <div class="h-2 w-2 rounded-full bg-white/30"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-center space-y-2">
+                    <h3 class="text-2xl font-bold text-white mb-2">6-Step Intelligent Flow</h3>
+                    <div class="p-3 rounded-xl transition-all bg-white/10 border border-white/20">
+                        <div class="font-bold text-base mb-1 text-white">1️⃣ Condition Awareness</div>
+                        <p class="text-gray-200 text-xs">"Do you know your condition?" If no → "How are you feeling?"</p>
+                    </div>
+                    <div class="p-3 rounded-xl transition-all bg-white/10 border border-white/20">
+                        <div class="font-bold text-base mb-1 text-white">2️⃣ Select Condition</div>
+                        <p class="text-gray-200 text-xs">Choose from Depression, Anxiety, PTSD, or describe symptoms</p>
+                    </div>
+                    <div class="p-3 rounded-xl transition-all bg-white/10 border border-white/20">
+                        <div class="font-bold text-base mb-1 text-white">3️⃣ Treatment History</div>
+                        <p class="text-gray-200 text-xs">"Have you sought therapy for this before?" Helps refine matching</p>
+                    </div>
+                    <div class="p-3 rounded-xl transition-all bg-blue-600 shadow-xl">
+                        <div class="font-bold text-base mb-1 text-white">4️⃣ Budget & Insurance</div>
+                        <p class="text-gray-100 text-xs">Set out-of-pocket range and insurance status</p>
+                    </div>
+                    <div class="p-3 rounded-xl transition-all bg-white/10 border border-white/20">
+                        <div class="font-bold text-base mb-1 text-white">5️⃣ Browse Providers</div>
+                        <p class="text-gray-200 text-xs">See specialists within budget, ratings, schedules</p>
+                    </div>
+                    <div class="p-3 rounded-xl transition-all bg-white/10 border border-white/20">
+                        <div class="font-bold text-base mb-1 text-white">6️⃣ Connect & Book</div>
+                        <p class="text-gray-200 text-xs">Select provider, view real costs, book instantly</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Slide 8: Patient Demo - Step 5 (Browse Providers) -->
+<div class="slide" data-slide="8">
+    <div class="h-full w-full bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 p-4 flex items-center justify-center">
+        <div class="max-w-7xl w-full">
+            <h2 class="text-3xl font-bold text-center text-white mb-2">Patient Experience Demo</h2>
+            <p class="text-base text-center mb-4 text-blue-200">Watch how Sarah finds her perfect therapist in under 2 minutes</p>
+            
+            <div class="grid grid-cols-2 gap-4">
+                <div class="flex justify-center items-center">
+                    <div class="w-72 h-[480px] bg-white rounded-[3rem] shadow-2xl border-8 border-gray-800 p-4 overflow-hidden">
+                        <div class="bg-gradient-to-br from-blue-600 to-purple-600 text-white rounded-2xl p-4 h-full flex flex-col">
+                            <div class="flex items-center gap-2 mb-4 pb-2 border-b border-white/20">
+                                <div class="text-xl">🧠</div>
+                                <div class="text-lg font-bold">AICareMatch</div>
+                            </div>
+                            <div class="flex-1 overflow-auto text-sm">
+<div>
+                                    <h3 class="text-sm font-bold mb-2">Matched Providers (3 found)</h3>
+                                    <div class="space-y-2 overflow-y-auto max-h-[320px]">
+                                        <div class="bg-white/20 rounded-xl p-2">
+                                            <div class="flex items-start gap-2">
+                                                <div class="w-8 h-8 bg-purple-400 rounded-full flex items-center justify-center text-base">👨‍⚕️</div>
+                                                <div class="flex-1">
+                                                    <div class="font-bold text-xs">Dr. Sarah Johnson, PhD</div>
+                                                    <div class="text-xs opacity-90">Depression specialist • 12 years exp.</div>
+                                                    <div class="flex items-center gap-1 mt-1">
+                                                        <div class="text-yellow-300 text-xs">⭐⭐⭐⭐⭐</div>
+                                                        <div class="text-xs">(47)</div>
+                                                    </div>
+                                                    <div class="mt-1 text-xs">
+                                                        <div>💰 $35 copay after insurance</div>
+                                                        <div>📅 Tomorrow 2pm</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="bg-white/20 rounded-xl p-2">
+                                            <div class="flex items-start gap-2">
+                                                <div class="w-8 h-8 bg-blue-400 rounded-full flex items-center justify-center text-base">👩‍⚕️</div>
+                                                <div class="flex-1">
+                                                    <div class="font-bold text-xs">Dr. Michael Chen, MD</div>
+                                                    <div class="text-xs opacity-90">Psychiatrist • CBT</div>
+                                                    <div class="flex items-center gap-1 mt-1">
+                                                        <div class="text-yellow-300 text-xs">⭐⭐⭐⭐⭐</div>
+                                                        <div class="text-xs">(89)</div>
+                                                    </div>
+                                                    <div class="mt-1 text-xs">
+                                                        <div>💰 $40 copay after insurance</div>
+                                                        <div>📅 Thursday 10am</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex gap-2 mt-3 justify-center">
+                                <div class="h-2 w-2 rounded-full bg-white/30"></div>
+                                <div class="h-2 w-2 rounded-full bg-white/30"></div>
+                                <div class="h-2 w-2 rounded-full bg-white/30"></div>
+                                <div class="h-2 w-2 rounded-full bg-white/30"></div>
+                                <div class="h-2 w-2 rounded-full bg-white"></div>
+                                <div class="h-2 w-2 rounded-full bg-white/30"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-center space-y-2">
+                    <h3 class="text-2xl font-bold text-white mb-2">6-Step Intelligent Flow</h3>
+                    <div class="p-3 rounded-xl transition-all bg-white/10 border border-white/20">
+                        <div class="font-bold text-base mb-1 text-white">1️⃣ Condition Awareness</div>
+                        <p class="text-gray-200 text-xs">"Do you know your condition?" If no → "How are you feeling?"</p>
+                    </div>
+                    <div class="p-3 rounded-xl transition-all bg-white/10 border border-white/20">
+                        <div class="font-bold text-base mb-1 text-white">2️⃣ Select Condition</div>
+                        <p class="text-gray-200 text-xs">Choose from Depression, Anxiety, PTSD, or describe symptoms</p>
+                    </div>
+                    <div class="p-3 rounded-xl transition-all bg-white/10 border border-white/20">
+                        <div class="font-bold text-base mb-1 text-white">3️⃣ Treatment History</div>
+                        <p class="text-gray-200 text-xs">"Have you sought therapy for this before?" Helps refine matching</p>
+                    </div>
+                    <div class="p-3 rounded-xl transition-all bg-white/10 border border-white/20">
+                        <div class="font-bold text-base mb-1 text-white">4️⃣ Budget & Insurance</div>
+                        <p class="text-gray-200 text-xs">Set out-of-pocket range and insurance status</p>
+                    </div>
+                    <div class="p-3 rounded-xl transition-all bg-blue-600 shadow-xl">
+                        <div class="font-bold text-base mb-1 text-white">5️⃣ Browse Providers</div>
+                        <p class="text-gray-100 text-xs">See specialists within budget, ratings, schedules</p>
+                    </div>
+                    <div class="p-3 rounded-xl transition-all bg-white/10 border border-white/20">
+                        <div class="font-bold text-base mb-1 text-white">6️⃣ Connect & Book</div>
+                        <p class="text-gray-200 text-xs">Select provider, view real costs, book instantly</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Slide 9: Patient Demo - Step 6 (Connect & Book) -->
+<div class="slide" data-slide="9">
+    <div class="h-full w-full bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 p-4 flex items-center justify-center">
+        <div class="max-w-7xl w-full">
+            <h2 class="text-3xl font-bold text-center text-white mb-2">Patient Experience Demo</h2>
+            <p class="text-base text-center mb-4 text-blue-200">Watch how Sarah finds her perfect therapist in under 2 minutes</p>
+            
+            <div class="grid grid-cols-2 gap-4">
+                <div class="flex justify-center items-center">
+                    <div class="w-72 h-[480px] bg-white rounded-[3rem] shadow-2xl border-8 border-gray-800 p-4 overflow-hidden">
+                        <div class="bg-gradient-to-br from-blue-600 to-purple-600 text-white rounded-2xl p-4 h-full flex flex-col">
+                            <div class="flex items-center gap-2 mb-4 pb-2 border-b border-white/20">
+                                <div class="text-xl">🧠</div>
+                                <div class="text-lg font-bold">AICareMatch</div>
+                            </div>
+                            <div class="flex-1 overflow-auto text-sm">
+<div class="text-center">
+                                    <div class="text-4xl mb-3">✅</div>
+                                    <h3 class="text-lg font-bold mb-2">Ready to book with Dr. Sarah Johnson?</h3>
+                                    <div class="bg-white/20 rounded-xl p-3 mb-3 text-left">
+                                        <div class="space-y-2 text-xs">
+                                            <div class="flex justify-between">
+                                                <span>Session type:</span>
+                                                <span class="font-bold">Initial consultation (50 min)</span>
+                                            </div>
+                                            <div class="flex justify-between">
+                                                <span>Date & time:</span>
+                                                <span class="font-bold">Tomorrow, 2:00 PM EST</span>
+                                            </div>
+                                            <div class="flex justify-between">
+                                                <span>Format:</span>
+                                                <span class="font-bold">Telehealth (secure video)</span>
+                                            </div>
+                                            <div class="flex justify-between border-t border-white/20 pt-2 mt-2">
+                                                <span>Your cost:</span>
+                                                <span class="font-bold text-green-300">$35 (after insurance)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="w-full bg-green-500 hover:bg-green-600 rounded-xl p-2 font-bold text-sm transition-all">
+                                        Confirm Booking
+                                    </button>
+                                    <p class="text-xs mt-2 opacity-75">You'll receive a secure video link 15 min before</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-2 mt-3 justify-center">
+                                <div class="h-2 w-2 rounded-full bg-white/30"></div>
+                                <div class="h-2 w-2 rounded-full bg-white/30"></div>
+                                <div class="h-2 w-2 rounded-full bg-white/30"></div>
+                                <div class="h-2 w-2 rounded-full bg-white/30"></div>
+                                <div class="h-2 w-2 rounded-full bg-white/30"></div>
+                                <div class="h-2 w-2 rounded-full bg-white"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-center space-y-2">
+                    <h3 class="text-2xl font-bold text-white mb-2">6-Step Intelligent Flow</h3>
+                    <div class="p-3 rounded-xl transition-all bg-white/10 border border-white/20">
+                        <div class="font-bold text-base mb-1 text-white">1️⃣ Condition Awareness</div>
+                        <p class="text-gray-200 text-xs">"Do you know your condition?" If no → "How are you feeling?"</p>
+                    </div>
+                    <div class="p-3 rounded-xl transition-all bg-white/10 border border-white/20">
+                        <div class="font-bold text-base mb-1 text-white">2️⃣ Select Condition</div>
+                        <p class="text-gray-200 text-xs">Choose from Depression, Anxiety, PTSD, or describe symptoms</p>
+                    </div>
+                    <div class="p-3 rounded-xl transition-all bg-white/10 border border-white/20">
+                        <div class="font-bold text-base mb-1 text-white">3️⃣ Treatment History</div>
+                        <p class="text-gray-200 text-xs">"Have you sought therapy for this before?" Helps refine matching</p>
+                    </div>
+                    <div class="p-3 rounded-xl transition-all bg-white/10 border border-white/20">
+                        <div class="font-bold text-base mb-1 text-white">4️⃣ Budget & Insurance</div>
+                        <p class="text-gray-200 text-xs">Set out-of-pocket range and insurance status</p>
+                    </div>
+                    <div class="p-3 rounded-xl transition-all bg-white/10 border border-white/20">
+                        <div class="font-bold text-base mb-1 text-white">5️⃣ Browse Providers</div>
+                        <p class="text-gray-200 text-xs">See specialists within budget, ratings, schedules</p>
+                    </div>
+                    <div class="p-3 rounded-xl transition-all bg-blue-600 shadow-xl">
+                        <div class="font-bold text-base mb-1 text-white">6️⃣ Connect & Book</div>
+                        <p class="text-gray-100 text-xs">Select provider, view real costs, book instantly</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Slide 10: Provider Demo - Step 1 (AI Matching) -->
+<div class="slide" data-slide="10">
+    <div class="h-full w-full bg-gradient-to-br from-purple-900 via-pink-900 to-indigo-900 p-4 flex items-center justify-center">
+        <div class="max-w-7xl w-full">
+            <h2 class="text-3xl font-bold text-center text-white mb-2">Provider Experience Demo</h2>
+            <p class="text-base text-center mb-4 text-purple-200">See how Dr. Kim manages her practice effortlessly</p>
+            
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-white rounded-3xl shadow-2xl p-5 h-[450px] overflow-hidden">
+                    <div class="flex items-center gap-3 mb-3 pb-2 border-b-2 border-gray-200">
+                        <div class="text-2xl">🧠</div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-800">Provider Dashboard</h3>
+                            <p class="text-xs text-gray-500">Welcome back, Dr. Kim</p>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-3 text-sm">
+<div class="bg-purple-100 rounded-xl p-3 border-2 border-purple-600">
+                            <div class="font-bold text-gray-800 text-base mb-2">Matched Patients (3)</div>
+                            <div class="text-gray-600">
+                                <div class="mt-2 flex items-center gap-2">
+                                    <div class="text-lg">👤</div>
+                                    <div>
+                                        <div class="font-semibold text-xs">Sarah M. - Depression</div>
+                                        <div class="text-xs text-purple-600">98% match • Insurance verified</div>
+                                    </div>
+                                </div>
+                                <div class="mt-2 flex items-center gap-2">
+                                    <div class="text-lg">👤</div>
+                                    <div>
+                                        <div class="font-semibold text-xs">Michael T. - Anxiety</div>
+                                        <div class="text-xs text-purple-600">94% match • Insurance verified</div>
+                                    </div>
+                                </div>
+                                <div class="mt-2 flex items-center gap-2">
+                                    <div class="text-lg">👤</div>
+                                    <div>
+                                        <div class="font-semibold text-xs">Jennifer L. - PTSD</div>
+                                        <div class="text-xs text-purple-600">91% match • Insurance verified</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-100 rounded-xl p-3 border-2 border-gray-300 mt-3">
+                            <div class="font-bold text-gray-800 text-xs">Today's Schedule</div>
+                            <div class="text-gray-600 text-xs mt-1">4 appointments confirmed</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-center space-y-2">
+                    <h3 class="text-2xl font-bold text-white mb-2">Automated Workflow</h3>
+                    
+                    <div class="bg-purple-600/40 backdrop-blur-lg p-3 rounded-xl border-2 border-purple-400">
+                        <div class="text-base font-bold mb-1 text-white">Step 1: AI Matching</div>
+                        <p class="text-gray-100 text-xs">3 pre-qualified patients matched to your specialty</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-lg p-3 rounded-xl border-2 border-white/20">
+                        <div class="text-base font-bold mb-1 text-white">Step 2: Auto-Documentation</div>
+                        <p class="text-gray-200 text-xs">All intake forms pre-filled and verified</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-lg p-3 rounded-xl border-2 border-white/20">
+                        <div class="text-base font-bold mb-1 text-white">Step 3: One-Click Schedule</div>
+                        <p class="text-gray-200 text-xs">Automated appointment booking and reminders</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-lg p-3 rounded-xl border-2 border-white/20">
+                        <div class="text-base font-bold mb-1 text-white">Step 4: Telehealth Ready</div>
+                        <p class="text-gray-200 text-xs">HIPAA-compliant video sessions</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-lg p-3 rounded-xl border-2 border-white/20">
+                        <div class="text-base font-bold mb-1 text-white">Step 5: AI Notes</div>
+                        <p class="text-gray-200 text-xs">Auto-generated session documentation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Slide 11: Provider Demo - Step 2 (Auto-Documentation) -->
+<div class="slide" data-slide="11">
+    <div class="h-full w-full bg-gradient-to-br from-purple-900 via-pink-900 to-indigo-900 p-4 flex items-center justify-center">
+        <div class="max-w-7xl w-full">
+            <h2 class="text-3xl font-bold text-center text-white mb-2">Provider Experience Demo</h2>
+            <p class="text-base text-center mb-4 text-purple-200">See how Dr. Kim manages her practice effortlessly</p>
+            
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-white rounded-3xl shadow-2xl p-5 h-[450px] overflow-hidden">
+                    <div class="flex items-center gap-3 mb-3 pb-2 border-b-2 border-gray-200">
+                        <div class="text-2xl">🧠</div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-800">Provider Dashboard</h3>
+                            <p class="text-xs text-gray-500">Welcome back, Dr. Kim</p>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-3 text-sm">
+<div class="bg-gray-100 rounded-xl p-3 border-2 border-gray-300">
+                            <div class="font-bold text-gray-800 text-xs">Matched Patients (3)</div>
+                            <div class="text-gray-600 text-xs">AI-matched to specialty</div>
+                        </div>
+                        <div class="bg-blue-100 rounded-xl p-3 border-2 border-blue-600 mt-3">
+                            <div class="font-bold text-gray-800 text-base mb-2">Auto-Documentation</div>
+                            <div class="text-gray-600 space-y-1">
+                                <div class="flex items-center gap-2 text-xs">
+                                    <div class="text-green-600 font-bold">✅</div>
+                                    <div>Insurance verified (Aetna PPO)</div>
+                                </div>
+                                <div class="flex items-center gap-2 text-xs">
+                                    <div class="text-green-600 font-bold">✅</div>
+                                    <div>Intake forms complete</div>
+                                </div>
+                                <div class="flex items-center gap-2 text-xs">
+                                    <div class="text-green-600 font-bold">✅</div>
+                                    <div>Medical history imported</div>
+                                </div>
+                                <div class="flex items-center gap-2 text-xs">
+                                    <div class="text-green-600 font-bold">✅</div>
+                                    <div>Templates ready</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-center space-y-2">
+                    <h3 class="text-2xl font-bold text-white mb-2">Automated Workflow</h3>
+                    
+                    <div class="bg-white/10 backdrop-blur-lg p-3 rounded-xl border-2 border-white/20">
+                        <div class="text-base font-bold mb-1 text-white">Step 1: AI Matching</div>
+                        <p class="text-gray-200 text-xs">3 pre-qualified patients matched to your specialty</p>
+                    </div>
+                    <div class="bg-purple-600/40 backdrop-blur-lg p-3 rounded-xl border-2 border-purple-400">
+                        <div class="text-base font-bold mb-1 text-white">Step 2: Auto-Documentation</div>
+                        <p class="text-gray-100 text-xs">All intake forms pre-filled and verified</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-lg p-3 rounded-xl border-2 border-white/20">
+                        <div class="text-base font-bold mb-1 text-white">Step 3: One-Click Schedule</div>
+                        <p class="text-gray-200 text-xs">Automated appointment booking and reminders</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-lg p-3 rounded-xl border-2 border-white/20">
+                        <div class="text-base font-bold mb-1 text-white">Step 4: Telehealth Ready</div>
+                        <p class="text-gray-200 text-xs">HIPAA-compliant video sessions</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-lg p-3 rounded-xl border-2 border-white/20">
+                        <div class="text-base font-bold mb-1 text-white">Step 5: AI Notes</div>
+                        <p class="text-gray-200 text-xs">Auto-generated session documentation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Slide 12: Provider Demo - Step 3 (One-Click Schedule) -->
+<div class="slide" data-slide="12">
+    <div class="h-full w-full bg-gradient-to-br from-purple-900 via-pink-900 to-indigo-900 p-4 flex items-center justify-center">
+        <div class="max-w-7xl w-full">
+            <h2 class="text-3xl font-bold text-center text-white mb-2">Provider Experience Demo</h2>
+            <p class="text-base text-center mb-4 text-purple-200">See how Dr. Kim manages her practice effortlessly</p>
+            
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-white rounded-3xl shadow-2xl p-5 h-[450px] overflow-hidden">
+                    <div class="flex items-center gap-3 mb-3 pb-2 border-b-2 border-gray-200">
+                        <div class="text-2xl">🧠</div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-800">Provider Dashboard</h3>
+                            <p class="text-xs text-gray-500">Welcome back, Dr. Kim</p>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-3 text-sm">
+<div class="bg-green-100 rounded-xl p-3 border-2 border-green-600">
+                            <div class="font-bold text-gray-800 text-base mb-2">Schedule Updated</div>
+                            <div class="text-gray-600 space-y-2">
+                                <div>
+                                    <div class="font-semibold text-xs">📅 Sarah M.</div>
+                                    <div class="text-xs">Tomorrow, 2:00 PM EST</div>
+                                    <div class="text-xs text-green-600 mt-1">Auto-reminder sent ✓</div>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-xs">🔔 Notifications</div>
+                                    <div class="text-xs">Calendar invites sent</div>
+                                    <div class="text-xs">SMS reminders scheduled</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-100 rounded-xl p-2 mt-3 border-2 border-gray-300">
+                            <div class="text-xs text-gray-700">
+                                <span class="font-bold">One-click scheduling</span> saved 15 minutes
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-center space-y-2">
+                    <h3 class="text-2xl font-bold text-white mb-2">Automated Workflow</h3>
+                    
+                    <div class="bg-white/10 backdrop-blur-lg p-3 rounded-xl border-2 border-white/20">
+                        <div class="text-base font-bold mb-1 text-white">Step 1: AI Matching</div>
+                        <p class="text-gray-200 text-xs">3 pre-qualified patients matched to your specialty</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-lg p-3 rounded-xl border-2 border-white/20">
+                        <div class="text-base font-bold mb-1 text-white">Step 2: Auto-Documentation</div>
+                        <p class="text-gray-200 text-xs">All intake forms pre-filled and verified</p>
+                    </div>
+                    <div class="bg-purple-600/40 backdrop-blur-lg p-3 rounded-xl border-2 border-purple-400">
+                        <div class="text-base font-bold mb-1 text-white">Step 3: One-Click Schedule</div>
+                        <p class="text-gray-100 text-xs">Automated appointment booking and reminders</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-lg p-3 rounded-xl border-2 border-white/20">
+                        <div class="text-base font-bold mb-1 text-white">Step 4: Telehealth Ready</div>
+                        <p class="text-gray-200 text-xs">HIPAA-compliant video sessions</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-lg p-3 rounded-xl border-2 border-white/20">
+                        <div class="text-base font-bold mb-1 text-white">Step 5: AI Notes</div>
+                        <p class="text-gray-200 text-xs">Auto-generated session documentation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Slide 13: Provider Demo - Step 4 (Telehealth Ready) -->
+<div class="slide" data-slide="13">
+    <div class="h-full w-full bg-gradient-to-br from-purple-900 via-pink-900 to-indigo-900 p-4 flex items-center justify-center">
+        <div class="max-w-7xl w-full">
+            <h2 class="text-3xl font-bold text-center text-white mb-2">Provider Experience Demo</h2>
+            <p class="text-base text-center mb-4 text-purple-200">See how Dr. Kim manages her practice effortlessly</p>
+            
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-white rounded-3xl shadow-2xl p-5 h-[450px] overflow-hidden">
+                    <div class="flex items-center gap-3 mb-3 pb-2 border-b-2 border-gray-200">
+                        <div class="text-2xl">🧠</div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-800">Provider Dashboard</h3>
+                            <p class="text-xs text-gray-500">Welcome back, Dr. Kim</p>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-3 text-sm">
+<div class="bg-purple-100 rounded-xl p-3 border-2 border-purple-600">
+                            <div class="font-bold text-gray-800 text-base mb-2">Telehealth Ready</div>
+                            <div class="text-gray-600 space-y-2">
+                                <div class="flex items-center gap-2">
+                                    <div class="text-lg">🎥</div>
+                                    <div>
+                                        <div class="font-semibold text-xs">Video link generated</div>
+                                        <div class="text-xs">Secure HIPAA-compliant session</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <div class="text-lg">🔒</div>
+                                    <div>
+                                        <div class="font-semibold text-xs">End-to-end encryption</div>
+                                        <div class="text-xs">Compliant with all regulations</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <div class="text-lg">✅</div>
+                                    <div>
+                                        <div class="font-semibold text-xs">Patient notified</div>
+                                        <div class="text-xs">Link sent 15 min before session</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-center space-y-2">
+                    <h3 class="text-2xl font-bold text-white mb-2">Automated Workflow</h3>
+                    
+                    <div class="bg-white/10 backdrop-blur-lg p-3 rounded-xl border-2 border-white/20">
+                        <div class="text-base font-bold mb-1 text-white">Step 1: AI Matching</div>
+                        <p class="text-gray-200 text-xs">3 pre-qualified patients matched to your specialty</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-lg p-3 rounded-xl border-2 border-white/20">
+                        <div class="text-base font-bold mb-1 text-white">Step 2: Auto-Documentation</div>
+                        <p class="text-gray-200 text-xs">All intake forms pre-filled and verified</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-lg p-3 rounded-xl border-2 border-white/20">
+                        <div class="text-base font-bold mb-1 text-white">Step 3: One-Click Schedule</div>
+                        <p class="text-gray-200 text-xs">Automated appointment booking and reminders</p>
+                    </div>
+                    <div class="bg-purple-600/40 backdrop-blur-lg p-3 rounded-xl border-2 border-purple-400">
+                        <div class="text-base font-bold mb-1 text-white">Step 4: Telehealth Ready</div>
+                        <p class="text-gray-100 text-xs">HIPAA-compliant video sessions</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-lg p-3 rounded-xl border-2 border-white/20">
+                        <div class="text-base font-bold mb-1 text-white">Step 5: AI Notes</div>
+                        <p class="text-gray-200 text-xs">Auto-generated session documentation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Slide 14: Provider Demo - Step 5 (AI Notes) -->
+<div class="slide" data-slide="14">
+    <div class="h-full w-full bg-gradient-to-br from-purple-900 via-pink-900 to-indigo-900 p-4 flex items-center justify-center">
+        <div class="max-w-7xl w-full">
+            <h2 class="text-3xl font-bold text-center text-white mb-2">Provider Experience Demo</h2>
+            <p class="text-base text-center mb-4 text-purple-200">See how Dr. Kim manages her practice effortlessly</p>
+            
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-white rounded-3xl shadow-2xl p-5 h-[450px] overflow-hidden">
+                    <div class="flex items-center gap-3 mb-3 pb-2 border-b-2 border-gray-200">
+                        <div class="text-2xl">🧠</div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-800">Provider Dashboard</h3>
+                            <p class="text-xs text-gray-500">Welcome back, Dr. Kim</p>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-3 text-sm">
+<div class="bg-orange-100 rounded-xl p-3 border-2 border-orange-600">
+                            <div class="font-bold text-gray-800 text-base mb-2">AI Session Notes</div>
+                            <div class="text-gray-600 space-y-2">
+                                <div class="flex items-center gap-2">
+                                    <div class="text-lg">📝</div>
+                                    <div>
+                                        <div class="font-semibold text-xs">Auto-documented</div>
+                                        <div class="text-xs">Session transcribed & summarized</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <div class="text-lg">⏱️</div>
+                                    <div>
+                                        <div class="font-semibold text-xs">60% time saved</div>
+                                        <div class="text-xs">From 30 min to 12 min documentation</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <div class="text-lg">✅</div>
+                                    <div>
+                                        <div class="font-semibold text-xs">Ready for review</div>
+                                        <div class="text-xs">Structured clinical note generated</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-center space-y-2">
+                    <h3 class="text-2xl font-bold text-white mb-2">Automated Workflow</h3>
+                    
+                    <div class="bg-white/10 backdrop-blur-lg p-3 rounded-xl border-2 border-white/20">
+                        <div class="text-base font-bold mb-1 text-white">Step 1: AI Matching</div>
+                        <p class="text-gray-200 text-xs">3 pre-qualified patients matched to your specialty</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-lg p-3 rounded-xl border-2 border-white/20">
+                        <div class="text-base font-bold mb-1 text-white">Step 2: Auto-Documentation</div>
+                        <p class="text-gray-200 text-xs">All intake forms pre-filled and verified</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-lg p-3 rounded-xl border-2 border-white/20">
+                        <div class="text-base font-bold mb-1 text-white">Step 3: One-Click Schedule</div>
+                        <p class="text-gray-200 text-xs">Automated appointment booking and reminders</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-lg p-3 rounded-xl border-2 border-white/20">
+                        <div class="text-base font-bold mb-1 text-white">Step 4: Telehealth Ready</div>
+                        <p class="text-gray-200 text-xs">HIPAA-compliant video sessions</p>
+                    </div>
+                    <div class="bg-purple-600/40 backdrop-blur-lg p-3 rounded-xl border-2 border-purple-400">
+                        <div class="text-base font-bold mb-1 text-white">Step 5: AI Notes</div>
+                        <p class="text-gray-100 text-xs">Auto-generated session documentation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 6: Market -->
+<div class="slide" data-slide="15">
+    <div class="h-full w-full bg-gradient-to-br from-green-50 to-blue-50 p-8 overflow-auto">
+        <h2 class="text-5xl font-bold text-green-900 mb-6">Market Opportunity</h2>
+        <div class="grid grid-cols-2 gap-6 max-w-7xl mx-auto">
+            <div class="space-y-5">
+                <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-3xl p-6 shadow-2xl">
+                    <div class="text-xs opacity-90 mb-1">Total Addressable Market (TAM)</div>
+                    <div class="text-5xl font-bold mb-2">$92.14B</div>
+                    <div class="text-lg mb-2">U.S. Behavioral Health Market (2025)</div>
+                    <div class="text-sm bg-white/20 rounded-lg p-3 mt-3">
+                        <div class="font-bold mb-2">Market Breakdown:</div>
+                        <div class="space-y-1 text-xs">
+                            <div>• All mental health services nationally</div>
+                            <div>• Outpatient + inpatient + digital platforms</div>
+                            <div>• <strong>CAGR: 5.3%</strong> through 2032</div>
+                            <div>• Driven by rising anxiety/depression prevalence</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-3xl p-6 shadow-2xl">
+                    <div class="text-xs opacity-90 mb-1">Serviceable Addressable Market (SAM)</div>
+                    <div class="text-5xl font-bold mb-2">$500M</div>
+                    <div class="text-lg mb-2">NY State Digital Mental Health</div>
+                    <div class="text-sm bg-white/20 rounded-lg p-3 mt-3">
+                        <div class="font-bold mb-2">Calculation Method:</div>
+                        <div class="space-y-1 text-xs">
+                            <div>• NY = <strong>6% of U.S. market</strong> (20M population)</div>
+                            <div>• NY behavioral health: <strong>~$5.5B annually</strong></div>
+                            <div>• Digital segment focus: matching + telehealth</div>
+                            <div>• State investment: <strong>$218M</strong> (2025) validates opportunity</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-r from-pink-600 to-red-600 text-white rounded-3xl p-6 shadow-2xl">
+                    <div class="text-xs opacity-90 mb-1">Serviceable Obtainable Market (SOM)</div>
+                    <div class="text-5xl font-bold mb-2">$5M</div>
+                    <div class="text-lg mb-2">Year 3 Revenue Target</div>
+                    <div class="text-sm bg-white/20 rounded-lg p-3 mt-3">
+                        <div class="font-bold mb-2">Path to Capture:</div>
+                        <div class="space-y-1 text-xs">
+                            <div>• Start: Upstate NY (Albany, 1M pop)</div>
+                            <div>• Expand: NYC (8.5M pop)</div>
+                            <div>• Partnerships: <strong>5-10 hospitals</strong> initially</div>
+                            <div>• <strong>1% market penetration</strong> = $5M ARR</div>
+                            <div>• Revenue: subscriptions + transaction fees</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="space-y-5">
+                <div class="bg-white rounded-3xl p-6 shadow-2xl">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Growth Drivers</h3>
+                    <div class="space-y-3 text-base">
+                        <div class="flex gap-3 items-start">
+                            <div class="text-2xl">📈</div>
+                            <div>
+                                <div class="font-bold">Telehealth Explosion</div>
+                                <div class="text-gray-600 text-sm">50% post-COVID increase, 42% visits now virtual</div>
+                            </div>
+                        </div>
+                        <div class="flex gap-3 items-start">
+                            <div class="text-2xl">🏢</div>
+                            <div>
+                                <div class="font-bold">Corporate Wellness</div>
+                                <div class="text-gray-600 text-sm">$92B market, 15% CAGR, $4:1 ROI</div>
+                            </div>
+                        </div>
+                        <div class="flex gap-3 items-start">
+                            <div class="text-2xl">⚖️</div>
+                            <div>
+                                <div class="font-bold">Parity Law Enforcement</div>
+                                <div class="text-gray-600 text-sm">Federal/state mandates accelerating</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-green-50 rounded-3xl p-5 border-2 border-green-400">
+                    <div class="font-bold text-lg text-green-900 mb-3">📊 Market Sizing Methodology</div>
+                    <div class="text-sm text-gray-800 space-y-2">
+                        <div class="bg-white rounded-lg p-3">
+                            <div class="font-bold text-blue-700">TAM Approach:</div>
+                            <div class="text-xs mt-1">Industry research (SAMHSA, market reports) for total U.S. behavioral health spending</div>
+                        </div>
+                        <div class="bg-white rounded-lg p-3">
+                            <div class="font-bold text-purple-700">SAM Approach:</div>
+                            <div class="text-xs mt-1">NY state proportion (6%) × digital health segment focus</div>
+                        </div>
+                        <div class="bg-white rounded-lg p-3">
+                            <div class="font-bold text-pink-700">SOM Approach:</div>
+                            <div class="text-xs mt-1">Bottom-up: partner hospitals × 1% penetration × revenue per user</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-3xl p-5">
+                    <div class="font-bold text-lg mb-1">NY State Investment</div>
+                    <div class="text-base">$218M announced in 2025 for mental health improvements</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 7: Traction & Validation -->
+<div class="slide" data-slide="16">
+    <div class="h-full w-full bg-gradient-to-br from-green-50 to-blue-50 p-8 overflow-auto">
+        <h2 class="text-5xl font-bold text-green-900 mb-6">Traction & Validation</h2>
+        <div class="grid grid-cols-3 gap-5 max-w-7xl mx-auto mb-6">
+            <div class="bg-white rounded-3xl p-6 shadow-2xl text-center">
+                <div class="text-4xl mb-3">👥</div>
+                <h3 class="text-3xl font-bold mb-2">25+</h3>
+                <p class="text-lg">Customer Discovery Interviews</p>
+            </div>
+            <div class="bg-white rounded-3xl p-6 shadow-2xl text-center">
+                <div class="text-4xl mb-3">🏥</div>
+                <h3 class="text-3xl font-bold mb-2">LOI</h3>
+                <p class="text-lg">Albany Med and OMH Partnership</p>
+            </div>
+            <div class="bg-white rounded-3xl p-6 shadow-2xl text-center">
+                <div class="text-4xl mb-3">🛡️</div>
+                <h3 class="text-3xl font-bold mb-2">C Corp</h3>
+                <p class="text-lg">Incorporated Sept 2025</p>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-3xl p-6 shadow-2xl max-w-7xl mx-auto">
+            <h3 class="text-2xl font-bold text-gray-900 mb-5 text-center">Strategic Partnerships</h3>
+            <div class="grid grid-cols-2 gap-5">
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-5 border-2 border-blue-300">
+                    <h4 class="text-xl font-bold mb-2 text-blue-900">🏥 Albany Medical Center and OMH</h4>
+                    <p class="text-base text-gray-700">Pilot launch Q2 2025 with 150+ providers for initial validation</p>
+                </div>
+                <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-5 border-2 border-purple-300">
+                    <h4 class="text-xl font-bold mb-2 text-purple-900">💻 Epic Systems</h4>
+                    <p class="text-base text-gray-700">EHR integration partnership providing access to <strong>250M patient records</strong></p>
+                </div>
+                <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-5 border-2 border-green-300">
+                    <h4 class="text-xl font-bold mb-2 text-green-900">🔬 SUNY-IBM Collaboration</h4>
+                    <p class="text-base text-gray-700">Watson AI partnership for advanced matching algorithms (7.5% revenue royalty)</p>
+                </div>
+                <div class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-5 border-2 border-orange-300">
+                    <h4 class="text-xl font-bold mb-2 text-orange-900">💼 Gusto Payroll</h4>
+                    <p class="text-base text-gray-700">Distribution partnership for corporate wellness onboarding and employee benefits integration</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-4 bg-blue-50 rounded-2xl p-4 max-w-5xl mx-auto border-2 border-blue-300">
+            <div class="text-sm text-gray-800 text-center">
+                <strong>Note on Epic Partnership:</strong> While Epic integration provides 250M+ patient reach, our platform is EHR-agnostic with Cerner/AllScripts alternatives. Epic enhances but doesn't define our strategy.
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 8: Competition -->
+<div class="slide" data-slide="17">
+    <div class="h-full w-full bg-gradient-to-br from-slate-50 to-purple-50 p-8 overflow-auto">
+        <h2 class="text-5xl font-bold text-purple-900 mb-6">Why We Win</h2>
+        <div class="max-w-7xl mx-auto">
+            <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-3xl p-6 shadow-2xl mb-6">
+                <h3 class="text-2xl font-bold mb-3">🎯 Only Complete Solution</h3>
+                <p class="text-lg">AI matching + cost transparency + forecasting + automation + telehealth</p>
+            </div>
+            
+            <div class="bg-white rounded-3xl p-6 shadow-2xl mb-6">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Competitive Landscape</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr class="border-b-2 border-gray-300">
+                                <th class="text-left p-3 font-bold">Feature</th>
+                                <th class="text-center p-3 font-bold text-blue-600">AICareMatch</th>
+                                <th class="text-center p-3 font-bold">Teladoc</th>
+                                <th class="text-center p-3 font-bold">BetterHelp</th>
+                                <th class="text-center p-3 font-bold">Hims & Hers</th>
+                                <th class="text-center p-3 font-bold">AI-Only Platforms</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-gray-200">
+                                <td class="p-3">Specialized AI Matching</td>
+                                <td class="text-center text-green-600 text-xl">✅</td>
+                                <td class="text-center text-red-600 text-xl">❌</td>
+                                <td class="text-center text-red-600 text-xl">❌</td>
+                                <td class="text-center text-red-600 text-xl">❌</td>
+                                <td class="text-center text-orange-600 text-xl">⚠️</td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="p-3">Cost Transparency</td>
+                                <td class="text-center text-green-600 text-xl">✅</td>
+                                <td class="text-center text-red-600 text-xl">❌</td>
+                                <td class="text-center text-red-600 text-xl">❌</td>
+                                <td class="text-center text-orange-600 text-xl">⚠️</td>
+                                <td class="text-center text-red-600 text-xl">❌</td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="p-3">Provider Burnout Reduction</td>
+                                <td class="text-center text-green-600 text-xl">✅</td>
+                                <td class="text-center text-red-600 text-xl">❌</td>
+                                <td class="text-center text-red-600 text-xl">❌</td>
+                                <td class="text-center text-red-600 text-xl">❌</td>
+                                <td class="text-center text-red-600 text-xl">❌</td>
+                            </tr>
+                            <tr class="border-b border-gray-200 bg-blue-50">
+                                <td class="p-3 font-semibold">Underserved Population Focus<br><span class="text-xs font-normal text-gray-600">(First responders, pregnant women, seniors)</span></td>
+                                <td class="text-center text-green-600 text-xl">✅</td>
+                                <td class="text-center text-red-600 text-xl">❌</td>
+                                <td class="text-center text-red-600 text-xl">❌</td>
+                                <td class="text-center text-orange-600 text-xl">⚠️</td>
+                                <td class="text-center text-red-600 text-xl">❌</td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="p-3">Senior-Friendly Interface</td>
+                                <td class="text-center text-green-600 text-xl">✅</td>
+                                <td class="text-center text-orange-600 text-xl">⚠️</td>
+                                <td class="text-center text-orange-600 text-xl">⚠️</td>
+                                <td class="text-center text-red-600 text-xl">❌</td>
+                                <td class="text-center text-red-600 text-xl">❌</td>
+                            </tr>
+                            <tr class="border-b border-gray-200 bg-green-50">
+                                <td class="p-3 font-semibold">Hybrid Care Options<br><span class="text-xs font-normal text-gray-600">(Telehealth + In-Person flexibility)</span></td>
+                                <td class="text-center text-green-600 text-xl">✅</td>
+                                <td class="text-center text-orange-600 text-xl">⚠️<br><span class="text-xs">Telehealth only</span></td>
+                                <td class="text-center text-red-600 text-xl">❌</td>
+                                <td class="text-center text-red-600 text-xl">❌</td>
+                                <td class="text-center text-red-600 text-xl">❌</td>
+                            </tr>
+                            <tr class="border-b border-gray-200 bg-red-50">
+                                <td class="p-3 font-semibold">HIPAA Compliance & Data Privacy<br><span class="text-xs font-normal text-red-600">(No third-party data sharing)</span></td>
+                                <td class="text-center text-green-600 text-xl">✅</td>
+                                <td class="text-center text-red-600 text-xl">❌<br><span class="text-xs">*Data shared</span></td>
+                                <td class="text-center text-green-600 text-xl">✅</td>
+                                <td class="text-center text-orange-600 text-xl">⚠️</td>
+                                <td class="text-center text-red-600 text-xl">❌</td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="p-3">Human-Touch Care</td>
+                                <td class="text-center text-green-600 text-xl">✅</td>
+                                <td class="text-center text-green-600 text-xl">✅</td>
+                                <td class="text-center text-green-600 text-xl">✅</td>
+                                <td class="text-center text-green-600 text-xl">✅</td>
+                                <td class="text-center text-red-600 text-xl">❌</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="mt-4 bg-red-50 border-2 border-red-300 rounded-xl p-3">
+                    <p class="text-xs text-red-800">
+                        <strong>*Note on Teladoc:</strong> Recent class action lawsuit alleges Teladoc shares telehealth user data with Facebook and other third parties without proper consent, raising serious HIPAA compliance concerns. AICareMatch maintains zero third-party data sharing policy.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-3xl p-5 shadow-2xl">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h4 class="text-2xl font-bold mb-2">🔐 Our Defensible Moats</h4>
+                        <p class="text-lg">Proprietary matching algorithms + cost transparency IP + Epic/hospital partnerships + provider network effects + HIPAA-first architecture</p>
+                    </div>
+                    <div class="text-right">
+                        <div class="text-3xl font-bold">18-24 Month</div>
+                        <div class="text-sm">Lead Time to Replicate</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 9: Revenue Model - Two sided market -->
+<div class="slide" data-slide="18">
+    <div class="h-full w-full bg-gradient-to-br from-purple-900 to-blue-900 text-white p-8 overflow-auto">
+        <h2 class="text-5xl font-bold mb-6">Revenue Model</h2>
+        <div class="grid grid-cols-4 gap-4 max-w-7xl mx-auto mb-6">
+            <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-5 border-2 border-white/20">
+                <div class="text-3xl mb-2">👤</div>
+                <h3 class="text-xl font-bold mb-2">Patient Premium</h3>
+                <div class="text-3xl font-bold mb-2">$20/mo</div>
+                <ul class="text-xs space-y-1 opacity-90">
+                    <li>✓ Priority matching</li>
+                    <li>✓ Cost simulations</li>
+                    <li>✓ Appointment tools</li>
+                </ul>
+            </div>
+            <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-5 border-2 border-white/20">
+                <div class="text-3xl mb-2">👨‍⚕️</div>
+                <h3 class="text-xl font-bold mb-2">Provider</h3>
+                <div class="text-3xl font-bold mb-2">$99-199/mo</div>
+                <ul class="text-xs space-y-1 opacity-90">
+                    <li>✓ Patient inquiries</li>
+                    <li>✓ AI documentation</li>
+                    <li>✓ Analytics</li>
+                </ul>
+            </div>
+            <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-5 border-2 border-white/20">
+                <div class="text-3xl mb-2">🏥</div>
+                <h3 class="text-xl font-bold mb-2">Hospital</h3>
+                <div class="text-3xl font-bold mb-2">$1K+/mo</div>
+                <ul class="text-xs space-y-1 opacity-90">
+                    <li>✓ Bulk onboarding</li>
+                    <li>✓ EHR integration</li>
+                    <li>✓ Forecasting</li>
+                </ul>
+            </div>
+            <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-5 border-2 border-white/20">
+                <div class="text-3xl mb-2">🏢</div>
+                <h3 class="text-xl font-bold mb-2">Corporate</h3>
+                <div class="text-3xl font-bold mb-2">$15-25/emp/yr</div>
+                <ul class="text-xs space-y-1 opacity-90">
+                    <li>✓ Employee access</li>
+                    <li>✓ ROI tracking</li>
+                </ul>
+            </div>
+        </div>
+        <div class="grid grid-cols-3 gap-5 max-w-7xl mx-auto mb-6">
+            <div class="bg-white rounded-2xl p-5 text-gray-900">
+                <div class="text-gray-600 mb-1 text-sm">Year 1 Revenue</div>
+                <div class="text-4xl font-bold text-blue-600">$285K</div>
+                <div class="mt-1 text-xs">1K users, 50 providers</div>
+            </div>
+            <div class="bg-gradient-to-br from-green-400 to-green-600 text-white rounded-2xl p-5 shadow-2xl border-4 border-green-700">
+                <div class="mb-1 text-sm font-bold">Year 2 Revenue</div>
+                <div class="text-4xl font-bold">$2.1M</div>
+                <div class="mt-1 text-sm">15K users, 300 providers</div>
+                <div class="mt-2 text-base font-bold bg-white/20 rounded-lg p-2">✅ BREAK-EVEN ACHIEVED</div>
+            </div>
+            <div class="bg-white rounded-2xl p-5 text-gray-900">
+                <div class="text-gray-600 mb-1 text-sm">Year 3 Revenue</div>
+                <div class="text-4xl font-bold text-green-600">$8.5M</div>
+                <div class="mt-1 text-xs">150K+ users, 1.2K providers</div>
+            </div>
+        </div>
+        
+        <div class="text-center text-2xl font-bold mb-4">
+            245% CAGR • 75%+ Gross Margin • 18:1 LTV:CAC • <span class="text-green-400">Break-even Month 18</span>
+        </div>
+        
+        <div class="bg-yellow-50 border-2 border-yellow-400 rounded-2xl p-4 max-w-7xl mx-auto">
+            <div class="text-center">
+                <span class="text-lg font-bold text-yellow-900">💡 Investor Highlight:</span>
+                <span class="text-lg text-gray-800"> 18:1 LTV:CAC ratio (3.6x above 5:1 benchmark) + &lt;5% monthly churn = highly efficient, sticky business model</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 10: Roadmap - WITH VISUAL TIMELINE AND UPDATED EPIC PARTNERSHIP -->
+<div class="slide" data-slide="19">
+    <div class="h-full w-full bg-gradient-to-br from-blue-50 to-purple-50 p-8 overflow-auto">
+        <h2 class="text-5xl font-bold text-blue-900 mb-6">Roadmap to Scale</h2>
+        <div class="max-w-7xl mx-auto">
+            <div class="relative mb-12">
+                <!-- Timeline connector line -->
+                <div class="timeline-connector mb-16">
+                    <div class="relative grid grid-cols-4 gap-5">
+                        <div class="text-center">
+                            <div class="timeline-dot bg-blue-600 mx-auto"></div>
+                            <div class="bg-white rounded-3xl p-5 shadow-2xl">
+                                <div class="text-2xl font-bold text-blue-600 mb-2">Months 1-6</div>
+                                <div class="text-lg font-bold mb-2">Pilot Launch</div>
+                                <ul class="text-xs text-left space-y-1">
+                                    <li>✓ Albany Med and OMH pilot</li>
+                                    <li>✓ <strong>Epic integration</strong> (single hospital)</li>
+                                    <li>✓ 1K patients, 50 providers</li>
+                                    <li>✓ 500 matches</li>
+                                    <li class="font-bold text-blue-600">💰 $127K revenue</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <div class="timeline-dot bg-purple-600 mx-auto"></div>
+                            <div class="bg-white rounded-3xl p-5 shadow-2xl">
+                                <div class="text-2xl font-bold text-purple-600 mb-2">Months 7-18</div>
+                                <div class="text-lg font-bold mb-2">Regional Expansion</div>
+                                <ul class="text-xs text-left space-y-1">
+                                    <li>• Expand Epic to 5-10 NY hospitals</li>
+                                    <li>• 15K users</li>
+                                    <li class="font-bold text-green-600">✅ Break-even</li>
+                                    <li class="font-bold text-purple-600">💰 $1.2M revenue</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <div class="timeline-dot bg-green-600 mx-auto"></div>
+                            <div class="bg-white rounded-3xl p-5 shadow-2xl">
+                                <div class="text-2xl font-bold text-green-600 mb-2">Months 19-36</div>
+                                <div class="text-lg font-bold mb-2">Multi-State</div>
+                                <ul class="text-xs text-left space-y-1">
+                                    <li>• PA, NJ, MA, CT, VT</li>
+                                    <li>• PSYPACT enrollment</li>
+                                    <li>• 150K+ users</li>
+                                    <li>• 20 hospitals</li>
+                                    <li class="font-bold text-green-600">💰 $8.5M revenue</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <div class="timeline-dot bg-orange-600 mx-auto"></div>
+                            <div class="bg-white rounded-3xl p-5 shadow-2xl">
+                                <div class="text-2xl font-bold text-orange-600 mb-2">Year 3+</div>
+                                <div class="text-lg font-bold mb-2">National Scale</div>
+                                <ul class="text-xs text-left space-y-1">
+                                    <li>• <strong>Epic App Orchard</strong> national listing</li>
+                                    <li>• Series A funding</li>
+                                    <li>• Multi-state licensing complete</li>
+                                    <li>• $100M+ valuation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Licensing compliance note -->
+            <div class="bg-blue-50 border-2 border-blue-400 rounded-2xl p-4 max-w-6xl mx-auto">
+                <div class="text-sm text-gray-800">
+                    <strong>📋 Multi-State Licensing Strategy:</strong> Year 1-2 limited to NY (providers need only NY licenses). Year 3+ expansion leverages PSYPACT for psychologists (30+ states) while psychiatrists obtain individual state licenses. Automated compliance checks ensure all providers are properly licensed in patient's state.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 11: IP & Licensing Strategy -->
+<div class="slide" data-slide="20">
+    <div class="h-full w-full bg-gradient-to-br from-indigo-50 to-purple-50 p-8 overflow-auto">
+        <h2 class="text-5xl font-bold text-indigo-900 mb-6">Defensible IP Strategy</h2>
+        <p class="text-xl text-gray-700 mb-6 max-w-5xl">Our intellectual property position creates sustainable competitive moats</p>
+        
+        <div class="grid grid-cols-2 gap-6 max-w-7xl mx-auto mb-6">
+            <div class="bg-white rounded-3xl p-6 shadow-xl border-l-4 border-blue-600">
+                <div class="text-4xl mb-3">🔐</div>
+                <h3 class="text-2xl font-bold mb-3 text-blue-900">Core IP Ownership</h3>
+                <ul class="space-y-2 text-gray-700">
+                    <li>✓ <strong>Founder-owned algorithms</strong> from published research (sentiment analysis, market prediction models)</li>
+                    <li>✓ <strong>Trade secret protection</strong> for matching engine and cost calculation methods</li>
+                    <li>✓ <strong>Proprietary cost transparency calculations</strong> integrating mental health parity law compliance</li>
+                    <li>✓ <strong>SUNY Tech Transfer confirmed:</strong> Published papers and code developed without university resources are founder-owned IP</li>
+                </ul>
+            </div>
+            
+            <div class="bg-white rounded-3xl p-6 shadow-xl border-l-4 border-purple-600">
+                <div class="text-4xl mb-3">🤝</div>
+                <h3 class="text-2xl font-bold mb-3 text-purple-900">Strategic Partnerships</h3>
+                <ul class="space-y-2 text-gray-700">
+                    <li>✓ <strong>SUNY-IBM:</strong> 7.5% revenue royalty for facilitation access; <strong>no IP transfer</strong>; commercial rights retained</li>
+                    <li>✓ <strong>Epic Systems:</strong> Non-exclusive integration partnership; <strong>no IP transfer</strong>; 10-15% revenue share on Epic-sourced patients (standard)</li>
+                    <li>✓ <strong>All vendor agreements</strong> preserve full commercialization rights</li>
+                    <li>✓ <strong>Clean cap table</strong> for acquirers; royalties transfer in M&A</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="grid grid-cols-3 gap-4 max-w-7xl mx-auto mb-6">
+            <div class="bg-gradient-to-br from-green-100 to-green-50 rounded-2xl p-5 border-2 border-green-400">
+                <h4 class="font-bold text-lg mb-2 text-green-900">🛡️ Protection Plan</h4>
+                <p class="text-sm text-gray-800">Provisional patents filed for cost transparency methods integrating parity law compliance after achieving product-market fit (Month 12-18) to avoid premature disclosure</p>
+            </div>
+            <div class="bg-gradient-to-br from-blue-100 to-blue-50 rounded-2xl p-5 border-2 border-blue-400">
+                <h4 class="font-bold text-lg mb-2 text-blue-900">📋 Licensing Ready</h4>
+                <p class="text-sm text-gray-800">Matching algorithms can be licensed to non-competing healthcare verticals (e.g., chronic disease management, elder care) as secondary revenue stream</p>
+            </div>
+            <div class="bg-gradient-to-br from-purple-100 to-purple-50 rounded-2xl p-5 border-2 border-purple-400">
+                <h4 class="font-bold text-lg mb-2 text-purple-900">🚀 Exit Clean</h4>
+                <p class="text-sm text-gray-800">Zero IP encumbrances; SUNY royalty (conditional on active facilitation) transfers to acquirer; no blocking rights; streamlined M&A due diligence</p>
+            </div>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-6 shadow-xl max-w-7xl mx-auto border-t-4 border-indigo-600">
+            <h4 class="text-xl font-bold mb-3 text-indigo-900">🔒 Comprehensive IP Safeguards</h4>
+            <div class="grid grid-cols-2 gap-4 text-sm text-gray-700">
+                <div>
+                    <strong>Trade Secrets:</strong> NDA with all employees/contractors, restricted code access, regular security audits, no GPL-licensed dependencies (source code is a trade secret)
+                </div>
+                <div>
+                    <strong>Trademarks:</strong> "AICareMatch" USPTO filing (Month 3), logo and tagline protection
+                </div>
+                <div>
+                    <strong>Copyrights:</strong> In the process of registering all software code, website content, marketing materials with USPTO
+                </div>
+                <div>
+                    <strong>Freedom to Operate:</strong> Patent landscape analysis completed; no infringement risk identified
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 12: Team -->
+<div class="slide" data-slide="21">
+    <div class="h-full w-full bg-gradient-to-br from-purple-900 to-blue-900 text-white p-8 overflow-auto">
+        <h2 class="text-5xl font-bold mb-6">The Team</h2>
+        <div class="max-w-7xl mx-auto mb-6">
+            <div class="bg-white/10 backdrop-blur-lg rounded-3xl p-6 border-2 border-white/20">
+                <div class="w-28 h-28 bg-gradient-to-br from-blue-400 to-purple-400 rounded-full mx-auto mb-3 flex items-center justify-center text-5xl">PG</div>
+                <h3 class="text-3xl font-bold mb-2 text-center">Piyush Gade</h3>
+                <div class="text-lg opacity-90 mb-3 text-center">Founder (92%)</div>
+                <ul class="space-y-1 text-sm text-center">
+                    <li>• PhD Economics (SUNY Albany)</li>
+                    <li>• Health economics & ML expertise, research on sentiment analysis, telehealth parity laws</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="bg-white/10 backdrop-blur-lg rounded-3xl p-5 border-2 border-white/20 max-w-7xl mx-auto mb-6">
+            <h3 class="text-xl font-bold mb-3">Advisory Board (4% equity reserved)</h3>
+            <div class="grid grid-cols-2 gap-3 text-base">
+                <div><span class="font-bold">Finalized (Anonymous):</span> Startup commercialization</div>
+                <div><span class="font-bold">MC :</span> Hospital Admin, Albany Med</div>
+                <div><span class="font-bold">HIPAA Specialist (TBD):</span> Healthcare attorney, HIPAA, telehealth parity, licensure compliance</div>
+                <div><span class="font-bold">AI/ML Specialist (TBD):</span> Algorithm optimization, scalability architecture</div>
+            </div>
+        </div>
+        <div class="grid grid-cols-2 gap-5 max-w-7xl mx-auto">
+            <div class="bg-white/10 backdrop-blur-lg rounded-3xl p-6 border-2 border-white/20">
+                <div class="w-28 h-28 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full mx-auto mb-3 flex items-center justify-center text-5xl">JG</div>
+                <h3 class="text-2xl font-bold mb-2 text-center">Justin Giordano</h3>
+                <div class="text-lg opacity-90 mb-3 text-center">RISE Fellow</div>
+                <ul class="space-y-1 text-xs text-center">
+                    <li>• Customer Discovery Support</li>
+                </ul>
+            </div>
+            <div class="bg-white/10 backdrop-blur-lg rounded-3xl p-6 border-2 border-white/20">
+                <div class="w-28 h-28 bg-gradient-to-br from-pink-400 to-red-400 rounded-full mx-auto mb-3 flex items-center justify-center text-5xl">DB</div>
+                <h3 class="text-2xl font-bold mb-2 text-center">Dharani Bhumireddy</h3>
+                <div class="text-lg opacity-90 mb-3 text-center">RISE Fellow</div>
+                <ul class="space-y-1 text-xs text-center">
+                    <li>• Customer Discovery Support</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 13: The Ask -->
+<div class="slide" data-slide="22">
+    <div class="h-full w-full bg-gradient-to-br from-blue-900 via-purple-900 to-pink-900 text-white p-8 overflow-auto">
+        <h2 class="text-6xl font-bold mb-6">The Ask</h2>
+        <div class="max-w-6xl mx-auto">
+            <div class="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border-2 border-white/20 mb-6">
+                <div class="text-center mb-6">
+                    <div class="text-7xl font-bold mb-3">$1.5M</div>
+                    <div class="text-3xl">Seed Round</div>
+                    <div class="text-lg mt-3 opacity-90">18-24 month runway to break-even</div>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-3">Use of Funds</h3>
+                        <div class="space-y-2">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span>MVP Development</span>
+                                    <span class="font-bold">$500K</span>
+                                </div>
+                                <div class="text-sm opacity-80">Epic integration, AI algorithms, HIPAA infrastructure</div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span>Market Launch</span>
+                                    <span class="font-bold">$400K</span>
+                                </div>
+                                <div class="text-sm opacity-80">Albany Med pilot, provider recruitment, marketing</div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span>Team Expansion</span>
+                                    <span class="font-bold">$350K</span>
+                                </div>
+                                <div class="text-sm opacity-80">CTO, clinical advisor, compliance officer</div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span>Operations & Legal</span>
+                                    <span class="font-bold">$250K</span>
+                                </div>
+                                <div class="text-sm opacity-80">IP protection (patents, trademarks), insurance, compliance audits</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-2xl font-bold mb-3">Milestones</h3>
+                        <div class="space-y-3">
+                            <div class="bg-white/20 rounded-2xl p-4">
+                                <div class="text-lg font-bold mb-1">Year 1: $285K</div>
+                                <div class="opacity-90 text-sm">1K patients, 50 providers, Albany Med pilot validated</div>
+                            </div>
+                            <div class="bg-white/20 rounded-2xl p-4">
+                                <div class="text-lg font-bold mb-1">Year 2: $2.1M</div>
+                                <div class="opacity-90 text-sm">15K users, 5-10 hospitals, <strong>break-even achieved</strong></div>
+                            </div>
+                            <div class="bg-white/20 rounded-2xl p-4">
+                                <div class="text-lg font-bold mb-1">Year 3: $8.5M</div>
+                                <div class="opacity-90 text-sm">150K+ users, multi-state expansion, Series A ready</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-3 gap-5">
+                <div class="bg-white rounded-3xl p-5 text-gray-900 text-center">
+                    <div class="text-4xl mb-2">⚡</div>
+                    <div class="font-bold text-lg">Perfect Timing</div>
+                    <div class="text-sm text-gray-600 mt-1">Post-COVID telehealth adoption, parity law enforcement</div>
+                </div>
+                <div class="bg-white rounded-3xl p-5 text-gray-900 text-center">
+                    <div class="text-4xl mb-2">🎯</div>
+                    <div class="font-bold text-lg">Proven Demand</div>
+                    <div class="text-sm text-gray-600 mt-1">25+ customer discovery interviews, Albany Med LOI</div>
+                </div>
+                <div class="bg-white rounded-3xl p-5 text-gray-900 text-center">
+                    <div class="text-4xl mb-2">🚀</div>
+                    <div class="font-bold text-lg">Exit Potential</div>
+                    <div class="text-sm text-gray-600 mt-1">Teladoc, Epic, UnitedHealth, Amazon strategic acquirers</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 14: Closing -->
+<div class="slide" data-slide="23">
+    <div class="h-full w-full bg-gradient-to-br from-blue-900 to-purple-900 text-white flex flex-col items-center justify-center p-8">
+        <div class="text-7xl mb-6 animate-pulse">🧠</div>
+        <h1 class="text-7xl font-bold mb-5">AICareMatch</h1>
+        <p class="text-3xl mb-6 text-center max-w-4xl">
+            Making mental health care as accessible as booking a ride
+        </p>
+        <div class="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border-2 border-white/20 max-w-5xl mb-6">
+            <div class="text-2xl font-bold mb-4">Contact</div>
+            <div class="grid grid-cols-2 gap-6 text-lg">
+                <div>
+                    <div class="font-bold mb-1">Piyush Gade</div>
+                    <div>Founder</div>
+                    <div class="mt-2">express@aicarematch.tech</div>
+                    <div>518-360-7855</div>
+                </div>
+                <div>
+                    <div class="font-bold mb-1">Learn More</div>
+                    <div>aicarematch.tech</div>
+                    <div class="mt-3 text-yellow-300 text-xl">Let's transform mental healthcare together</div>
+                </div>
+            </div>
+        </div>
+        <div class="text-xl opacity-90 text-center max-w-4xl bg-white/10 backdrop-blur-lg rounded-2xl p-6">
+            Join us in <strong>preventing 10,000+ suicides annually</strong> and supporting millions of families
+            <div class="mt-3 text-base">
+                <span class="inline-block bg-green-500/20 rounded-lg px-3 py-1 mr-2">40% reduction in ED psychiatric boarding</span>
+                <span class="inline-block bg-blue-500/20 rounded-lg px-3 py-1 mr-2">50,000+ mothers reached by Year 5</span>
+                <span class="inline-block bg-purple-500/20 rounded-lg px-3 py-1">25,000+ first responders supported</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Navigation Bar -->
+<div class="fixed bottom-0 left-1/2 transform -translate-x-1/2 flex items-center gap-4 bg-black/70 backdrop-blur-lg rounded-t-2xl px-6 py-3 z-50">
+    <button id="prevBtn" class="p-2 rounded-full bg-white/20 hover:bg-white/30 disabled:opacity-30 disabled:cursor-not-allowed transition-all">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+    </button>
+    
+    <div class="text-white font-bold" id="slideCounter">1 / 23</div>
+    
+    <button id="nextBtn" class="p-2 rounded-full bg-white/20 hover:bg-white/30 disabled:opacity-30 disabled:cursor-not-allowed transition-all">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+    </button>
+</div>
+
+<script>
+let currentSlide = 1;
+const totalSlides = 23;
+
+function init() {
+    showSlide(currentSlide);
+    
+    document.getElementById("prevBtn").addEventListener("click", prevSlide);
+    document.getElementById("nextBtn").addEventListener("click", nextSlide);
+    
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowLeft") prevSlide();
+        if (e.key === "ArrowRight") nextSlide();
+    });
+}
+
+function showSlide(n) {
+    const slides = document.querySelectorAll(".slide");
+    slides.forEach(slide => slide.classList.remove("active"));
+    
+    if (n > totalSlides) currentSlide = totalSlides;
+    if (n < 1) currentSlide = 1;
+    
+    slides[currentSlide - 1].classList.add("active");
+    
+    document.getElementById("slideCounter").textContent = `${currentSlide} / ${totalSlides}`;
+    document.getElementById("prevBtn").disabled = currentSlide === 1;
+    document.getElementById("nextBtn").disabled = currentSlide === totalSlides;
+}
+
+function nextSlide() {
+    if (currentSlide < totalSlides) {
+        currentSlide++;
+        showSlide(currentSlide);
+    }
+}
+
+function prevSlide() {
+    if (currentSlide > 1) {
+        currentSlide--;
+        showSlide(currentSlide);
+    }
+}
+
+init();
+</script>
+
+</body>
+</html>
