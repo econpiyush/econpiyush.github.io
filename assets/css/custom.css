@@ -1,33 +1,6 @@
-/* HEADSHOT — bigger + rounded + lively */
+/* HEADSHOT ONLY — bigger + rounded */
 img[src*="piyush-gade-headshot-web"] {
-  max-width: 280px !important;           /* make it bigger (try 300px if you want even larger) */
-  border-radius: 12px !important;        /* rounded corners — change to 50% for full circle */
-  box-shadow: 0 8px 25px rgba(0,0,0,0.12) !important; /* adds nice depth */
-}
-
-/* LAYOUT — content left 72%, photo right 25%, less white space */
-.wrapper, .site-wrapper, .page {
-  max-width: 1150px !important;
-  margin: 40px auto !important;
-  padding: 0 30px !important;
-}
-
-.profile-section, .author-profile, .page__content, .bio, .main-content {
-  display: flex !important;
-  flex-direction: row-reverse;           /* flips photo to RIGHT side */
-  gap: 3% !important;
-  align-items: flex-start;
-}
-
-.content-column, .profile-info, .text-content, .page__lead {
-  flex: 0 0 72% !important;
-}
-
-.photo-column, .avatar-wrapper, .author__avatar {
-  flex: 0 0 25% !important;
-}
-
-/* Extra white-space cleanup */
-h1, h2, .lead, p {
-  margin-bottom: 1rem !important;
+  max-width: 280px !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12) !important;
 }
