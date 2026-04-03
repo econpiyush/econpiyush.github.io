@@ -1,6 +1,4 @@
-/* HEADSHOT ONLY — bigger + rounded */
 img[src*="piyush-gade-headshot-web"] {
-  max-width: 280px !important;
+  max-width: 265px !important;
   border-radius: 12px !important;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.12) !important;
 }
