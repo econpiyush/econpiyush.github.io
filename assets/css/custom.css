@@ -1,4 +1,65 @@
-img[src*="piyush-gade-headshot-web"] {
-  max-width: 265px !important;
-  border-radius: 12px !important;
+/* ============================================
+   econpiyush.github.io — layout + headshot fix
+   ============================================ */
+
+/* 1. WIDER CONTAINER — less white space on sides */
+#main {
+  max-width: 1200px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding: 0 24px !important;
+  display: flex !important;
+  flex-direction: row-reverse !important;   /* flips photo to RIGHT */
+  gap: 3% !important;
+  align-items: flex-start !important;
+}
+
+/* 2. SIDEBAR (photo + name + location) — 25% on the RIGHT */
+.sidebar {
+  float: none !important;
+  width: 25% !important;
+  flex: 0 0 25% !important;
+  min-width: 0 !important;
+  position: relative !important;
+  opacity: 1 !important;
+  padding-top: 1em !important;
+}
+
+/* 3. MAIN CONTENT — 72% on the LEFT */
+#main > .page,
+#main > article {
+  float: none !important;
+  width: 72% !important;
+  flex: 0 0 72% !important;
+  min-width: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* 4. HEADSHOT — rounded + bigger + subtle shadow */
+.author__avatar img {
+  max-width: 300px !important;
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 14px !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.10) !important;
+}
+
+/* 5. Tighten vertical white space */
+.page__content h1,
+.page__content h2 {
+  margin-top: 0.6em !important;
+}
+
+/* 6. MOBILE — stack vertically below 768px */
+@media (max-width: 768px) {
+  #main {
+    flex-direction: column !important;
+    gap: 0 !important;
+  }
+  .sidebar,
+  #main > .page,
+  #main > article {
+    width: 100% !important;
+    flex: 0 0 100% !important;
+  }
 }
