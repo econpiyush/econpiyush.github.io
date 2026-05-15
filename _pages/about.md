@@ -47,17 +47,6 @@ redirect_from:
   </div>
   <div style="margin-bottom: 18px; padding-bottom: 12px; border-bottom: 1px solid #666;">
     <div style="font-size: 1.05em; font-weight: bold; color: #000; margin-bottom: 4px;">
-      Regulating Physician Reimbursements and Consumer Out-of-Pocket Costs: Implications for Medicare Costs
-    </div>
-    <div style="color: #000; margin-bottom: 3px; font-weight: bold; font-style: italic; font-size: 0.92em;">
-      Under review
-    </div>
-    <div style="color: #333; line-height: 1.4; font-size: 0.9em;">
-      <strong style="color: #000;">Abstract:</strong> This paper studies the impact of telehealth parity laws on Medicare costs, exploiting state-level variation in regulatory framing. Non-binding regulations (price ceiling and cost ceiling) reduce Medicare costs by preserving telehealth's cost advantages and shifting more cost-sharing to consumers. Binding regulations (price floor and cost parity) have near-zero net effects. Cost-reducing effects diminish with higher broadband penetration. The findings highlight how technological and regional variation shape financial implications of healthcare regulation.
-    </div>
-  </div>
-  <div style="margin-bottom: 18px; padding-bottom: 12px; border-bottom: 1px solid #666;">
-    <div style="font-size: 1.05em; font-weight: bold; color: #000; margin-bottom: 4px;">
      Where Has the Foreign Signal Gone? <span style="font-weight: normal; font-style: italic;">(with Ulrich Hounyo)</span>
     </div>
     <div style="color: #555; margin-bottom: 4px; font-size: 0.9em;">
