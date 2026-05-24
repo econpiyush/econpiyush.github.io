@@ -8,7 +8,7 @@ redirect_from:
 ---
 <div style="max-width: 900px; margin: 10px auto; line-height: 1.4; font-size: 0.95em;">
   <div style="text-align: center; margin-bottom: 20px;">
-    <h2 style="color: #2c5aa0; font-size: 1.4em; letter-spacing: 0.3px; margin-bottom: 12px;">Job Market Candidate 2026–27</h2>
+    <h2 style="color: #2c5aa0; font-size: 1.4em; letter-spacing: 0.3px; margin-bottom: 12px;"></h2>
   </div>
   <div style="margin-bottom: 18px; padding-bottom: 12px; border-bottom: 2px solid #333;">
     <h3 style="color: #2c5aa0; font-size: 1.1em; margin-bottom: 6px;">Fields</h3>
