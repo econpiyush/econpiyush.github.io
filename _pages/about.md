@@ -42,7 +42,7 @@ redirect_from:
       <a href="https://www.dropbox.com/scl/fi/gw2mrddljugt1yfmnb4a0/JMP_Contributions.pdf?rlkey=ei5fgowgz17orms5wsxq5ffcr&st=1kp29tg3&dl=0" style="color: #2c5aa0; text-decoration: none; font-size: 0.92em;"></a>
     </div>
     <div style="color: #333; line-height: 1.4; font-size: 0.9em;">
-      <strong style="color: #000;">Abstract:</strong> 
+      <strong style="color: #000;">:</strong> 
     </div>
   </div>
   <div style="margin-bottom: 18px; padding-bottom: 12px; border-bottom: 1px solid #666;">
