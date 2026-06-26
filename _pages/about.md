@@ -28,7 +28,7 @@ redirect_from:
   <h2 style="color: #2c5aa0; font-size: 1.4em; letter-spacing: 0.3px; margin-bottom: 15px; text-align: center;">Working Papers</h2>
   <div style="margin-bottom: 18px; padding-bottom: 12px; border-bottom: 1px solid #666;">
     <div style="font-size: 1.05em; font-weight: bold; color: #000; margin-bottom: 4px;">
-      <span style="color: #2c5aa0; font-weight: normal; font-size: 0.95em;">Job Market Paper</span><br>
+      <span style="color: #2c5aa0; font-weight: normal; font-size: 0.95em;"></span><br>
       How Do Regulations and Technology Affect Service Allocation and Market Structure?
     </div>
     <div style="color: #000; margin-bottom: 3px; font-weight: bold; font-style: italic; font-size: 0.92em;">
