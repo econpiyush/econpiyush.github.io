@@ -61,7 +61,7 @@ redirect_from:
       Medicaid Expansion: The Key that Opens the Job Lock?
     </div>
     <div style="color: #333; line-height: 1.4; font-size: 0.9em;">
-      <strong style="color: #000;">Abstract:</strong> 
+      <strong style="color: #000;">:</strong> 
     </div>
   </div>
 </div>
