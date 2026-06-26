@@ -42,7 +42,7 @@ redirect_from:
       <a href="https://www.dropbox.com/scl/fi/gw2mrddljugt1yfmnb4a0/JMP_Contributions.pdf?rlkey=ei5fgowgz17orms5wsxq5ffcr&st=1kp29tg3&dl=0" style="color: #2c5aa0; text-decoration: none; font-size: 0.92em;">Summary of Contributions</a>
     </div>
     <div style="color: #333; line-height: 1.4; font-size: 0.9em;">
-      <strong style="color: #000;">Abstract:</strong> This paper estimates the effects of price controls and cost controls on healthcare service quantity and their role in the spatial restructuring of physician markets. Exploiting quasi-experimental variation from telehealth parity laws and broadband internet, I find that price floors and ceilings increase service quantity, while cost parity reduces it, with these effects amplified progressively with increased broadband access. In non-metro areas, these regulations improve efficiency by increasing quantity while reducing physician density.
+      <strong style="color: #000;">Abstract:</strong> 
     </div>
   </div>
   <div style="margin-bottom: 18px; padding-bottom: 12px; border-bottom: 1px solid #666;">
@@ -61,7 +61,7 @@ redirect_from:
       Medicaid Expansion: The Key that Opens the Job Lock?
     </div>
     <div style="color: #333; line-height: 1.4; font-size: 0.9em;">
-      <strong style="color: #000;">Abstract:</strong> Using search theory and a triple-difference design, I examine Medicaid expansion's effect on job search and labor market outcomes. Preliminary results suggest small or insignificant effects on employment but suggestive evidence of increased "on-the-job search," consistent with reduced job lock.
+      <strong style="color: #000;">Abstract:</strong> 
     </div>
   </div>
 </div>
