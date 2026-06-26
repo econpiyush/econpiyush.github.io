@@ -13,10 +13,10 @@ redirect_from:
   <div style="margin-bottom: 18px; padding-bottom: 12px; border-bottom: 2px solid #333;">
     <h3 style="color: #2c5aa0; font-size: 1.1em; margin-bottom: 6px;">Fields</h3>
     <div style="color: #333; margin-bottom: 4px;">
-      <strong style="color: #000;">Primary:</strong> Industrial Organization (Economics of Regulation, Price Theory) · Health & Labor Economics · Financial Economics (Sentiment Analysis, Asset Pricing)
+      <strong style="color: #000;">Primary:</strong> I work on topics in regulation and information in financial, health and labor market. 
     </div>
     <div style="color: #333;">
-      <strong style="color: #000;">Secondary:</strong> Behavioral Economics and Decision Theory
+      <strong style="color: #000;">
     </div>
   </div>
   <div style="margin-bottom: 18px; padding-bottom: 12px; border-bottom: 2px solid #333; text-align: center;">
@@ -53,7 +53,7 @@ redirect_from:
       Presented at <a href="https://www.econometricsociety.org/regional-activities/schedule/2026/06/04/2026-North-American-Summer-Meeting-Atlanta-Georgia" style="color: #2c5aa0; text-decoration: none;">North American Summer Meeting of the Econometric Society (NASM 2026)</a>, Atlanta.
     </div>
     <div style="color: #333; line-height: 1.4; font-size: 0.9em;">
-      <strong style="color: #000;">Abstract:</strong> Social media sentiment predicts stock losses and gains, yet for which stocks and why remains unclear. We propose that the answer lies in the match between who discusses a stock on Twitter and who holds genuine informational advantages about it. English-language Twitter discourse is concentrated among U.S.-based investors who are well-positioned to assess domestic firms but comparatively disadvantaged in evaluating foreign stocks listed on U.S. exchanges. This mismatch predicts that U.S. Twitter sentiment should be a more reliable signal for domestic stocks than for foreign ones. Using a large panel of firm-quarter observations, we find that sentiment uncertainty predicts subsequent losses for domestic stocks but leaves foreign losses largely unpredicted. This predictive gap is present for the most typical stocks, widens for stocks of intermediate benchmark similarity, and collapses for the least typical stocks, where domestic and foreign sentiment become equally informative. Structural estimation provides evidence that the domestic advantage reflects genuine signal precision rather than mechanical differences in return volatility. Exploiting COVID-19 as a shock to information geography, we find directional evidence that the pandemic amplified the domestic advantage. These findings link the home bias literature to the informativeness of crowd-sourced signals and suggest that the value of social media data is geographically structured.
+      <strong style="color: #000;">Abstract:</strong> Social media sentiment predicts stock losses and gains, yet for which stocks and why remains unclear. We propose that the answer lies in the match between who discusses a stock on Twitter and who holds genuine informational advantages about it. English-language Twitter discourse is concentrated among U.S.-based investors who are well-positioned to assess domestic firms but comparatively disadvantaged in evaluating foreign stocks listed on U.S. exchanges. This mismatch predicts that U.S. Twitter sentiment should be a more reliable signal for domestic stocks than for foreign ones. Using a large panel of firm-quarter observations, we find that sentiment uncertainty predicts subsequent losses for domestic stocks but leaves foreign losses largely unpredicted. This predictive gap is present for the most typical stocks, widens for stocks of intermediate benchmark similarity, and collapses for the least typical stocks, where domestic and foreign sentiment become equally informative. Structural estimation provides evidence that the domestic advantage reflects genuine signal precision rather than mechanical differences in return volatility. These findings link the home bias literature to the informativeness of crowd-sourced signals and suggest that the value of social media data is geographically structured.
     </div>
   </div>
   <div style="margin-bottom: 18px; padding-bottom: 12px; border-bottom: 1px solid #666;">
