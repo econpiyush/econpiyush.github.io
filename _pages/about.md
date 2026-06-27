@@ -14,9 +14,7 @@ redirect_from:
   </div>
   <div style="margin-bottom: 18px; padding-bottom: 12px; border-bottom: 2px solid #333; text-align: center;">
     <a href="" style="color: #2c5aa0; text-decoration: none; margin: 0 12px;">CV</a> ·
-    <a href="mailto:pgade@albany.edu" style="color: #2c5aa0; text-decoration: none; margin: 0 12px;">Email</a> ·
-    <a href="https://www.aeaweb.org/joe/candidates/candidate_profile_view.php?jcand=iax4jM_88esRU4-iRc4rlVUZYBoC999Q" style="color: #2c5aa0; text-decoration: none; margin: 0 12px;"></a> ·
-    <a href="https://x.com/econpi" style="color: #2c5aa0; text-decoration: none; margin: 0 12px;"></a>
+    <a href="mailto:pgade@albany.edu" style="color: #2c5aa0; text-decoration: none; margin: 0 12px;">Email</a> 
   </div>
   <h2 style="color: #2c5aa0; font-size: 1.4em; letter-spacing: 0.3px; margin-bottom: 15px; text-align: center;">Working Papers</h2>
   <div style="margin-bottom: 18px; padding-bottom: 12px; border-bottom: 1px solid #666;">
