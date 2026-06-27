@@ -7,20 +7,13 @@ redirect_from:
   - /about.html
 ---
 <div style="max-width: 900px; margin: 10px auto; line-height: 1.4; font-size: 0.95em;">
-  <div style="text-align: center; margin-bottom: 20px;">
-    <h2 style="color: #2c5aa0; font-size: 1.4em; letter-spacing: 0.3px; margin-bottom: 12px;"></h2>
-  </div>
   <div style="margin-bottom: 18px; padding-bottom: 12px; border-bottom: 2px solid #333;">
-    <h3 style="color: #2c5aa0; font-size: 1.1em; margin-bottom: 6px;">Fields</h3>
-    <div style="color: #333; margin-bottom: 4px;">
-      <strong style="color: #000;">Primary:</strong> I work on topics in regulation and information in financial, health and labor market.
-    </div>
-    <div style="color: #333;">
-      <strong style="color: #000;">
-    </div>
+    <p style="color: #333; margin: 0;">
+      I work on topics in regulation and information in financial, health, and labor markets.
+    </p>
   </div>
   <div style="margin-bottom: 18px; padding-bottom: 12px; border-bottom: 2px solid #333; text-align: center;">
-    <a href="https://www.dropbox.com/scl/fi/uwrx9xmfglkti2mujhd2g/Piyush_CV.pdf?rlkey=zpbvzi7panmk2fzi5nq7j17a2&st=4zouktsl&dl=0" style="color: #2c5aa0; text-decoration: none; margin: 0 12px;">CV (updated Feb 16, 2026)</a> ·
+    <a href="https://www.dropbox.com/scl/fi/uwrx9xmfglkti2mujhd2g/Piyush_CV.pdf?rlkey=zpbvzi7panmk2fzi5nq7j17a2&st=4zouktsl&dl=0" style="color: #2c5aa0; text-decoration: none; margin: 0 12px;">CV</a> ·
     <a href="mailto:pgade@albany.edu" style="color: #2c5aa0; text-decoration: none; margin: 0 12px;">Email</a> ·
     <a href="https://www.aeaweb.org/joe/candidates/candidate_profile_view.php?jcand=iax4jM_88esRU4-iRc4rlVUZYBoC999Q" style="color: #2c5aa0; text-decoration: none; margin: 0 12px;">JOE</a> ·
     <a href="https://x.com/econpi" style="color: #2c5aa0; text-decoration: none; margin: 0 12px;">X/Twitter</a>
@@ -28,7 +21,6 @@ redirect_from:
   <h2 style="color: #2c5aa0; font-size: 1.4em; letter-spacing: 0.3px; margin-bottom: 15px; text-align: center;">Working Papers</h2>
   <div style="margin-bottom: 18px; padding-bottom: 12px; border-bottom: 1px solid #666;">
     <div style="font-size: 1.05em; font-weight: bold; color: #000; margin-bottom: 4px;">
-      <span style="color: #2c5aa0; font-weight: normal; font-size: 0.95em;"></span><br>
       How Do Regulations and Technology Affect Service Allocation and Market Structure?
     </div>
     <div style="color: #000; margin-bottom: 3px; font-weight: bold; font-style: italic; font-size: 0.92em;">
@@ -39,10 +31,7 @@ redirect_from:
       Presented at Asia Meeting of the Econometric Society (AMES) 2024 and Eastern Economic Association (CSWEP session) 2024.
     </div>
     <div style="margin-bottom: 4px;">
-      <a href="https://www.dropbox.com/scl/fi/gw2mrddljugt1yfmnb4a0/JMP_Contributions.pdf?rlkey=ei5fgowgz17orms5wsxq5ffcr&st=1kp29tg3&dl=0" style="color: #2c5aa0; text-decoration: none; font-size: 0.92em;"></a>
-    </div>
-    <div style="color: #333; line-height: 1.4; font-size: 0.9em;">
-      <strong style="color: #000;">:</strong> 
+      <a href="https://www.dropbox.com/scl/fi/gw2mrddljugt1yfmnb4a0/JMP_Contributions.pdf?rlkey=ei5fgowgz17orms5wsxq5ffcr&st=1kp29tg3&dl=0" style="color: #2c5aa0; text-decoration: none; font-size: 0.92em;">Summary of Contributions</a>
     </div>
   </div>
   <div style="margin-bottom: 18px; padding-bottom: 12px; border-bottom: 1px solid #666;">
@@ -59,9 +48,6 @@ redirect_from:
   <div style="margin-bottom: 18px; padding-bottom: 12px; border-bottom: 1px solid #666;">
     <div style="font-size: 1.05em; font-weight: bold; color: #000; margin-bottom: 4px;">
       Medicaid Expansion: The Key that Opens the Job Lock?
-    </div>
-    <div style="color: #333; line-height: 1.4; font-size: 0.9em;">
-      <strong style="color: #000;">:</strong> 
     </div>
   </div>
 </div>
