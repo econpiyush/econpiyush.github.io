@@ -29,7 +29,6 @@ redirect_from:
       Presented at Asia Meeting of the Econometric Society (AMES) 2024 and Eastern Economic Association (CSWEP session) 2024.
     </div>
     <div style="margin-bottom: 4px;">
-      <a href="https://www.dropbox.com/scl/fi/gw2mrddljugt1yfmnb4a0/JMP_Contributions.pdf?rlkey=ei5fgowgz17orms5wsxq5ffcr&st=1kp29tg3&dl=0" style="color: #2c5aa0; text-decoration: none; font-size: 0.92em;">Summary of Contributions</a>
     </div>
   </div>
   <div style="margin-bottom: 18px; padding-bottom: 12px; border-bottom: 1px solid #666;">
