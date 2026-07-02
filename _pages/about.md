@@ -9,7 +9,7 @@ redirect_from:
 <div style="max-width: 900px; margin: 10px auto; line-height: 1.4; font-size: 0.95em;">
   <div style="margin-bottom: 18px; padding-bottom: 12px; border-bottom: 2px solid #333;">
     <p style="color: #333; margin: 0;">
-      I work on topics in regulation and information in financial, health, and labor markets.
+      I work on topics in regulation and information in financial, healthcare, and labor markets.
     </p>
   </div>
   <div style="margin-bottom: 18px; padding-bottom: 12px; border-bottom: 2px solid #333; text-align: center;">
